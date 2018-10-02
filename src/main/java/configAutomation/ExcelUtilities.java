@@ -48,11 +48,7 @@ public class ExcelUtilities {
 		}
 		return optionList;
 	}
-	
-	public void openExcelFile(String filename) {
 		
-	}
-	
 	public String getCellData(int RowNum, int ColNum, String sheetName) throws Exception{
 		
 		try{
@@ -68,5 +64,30 @@ public class ExcelUtilities {
 
 			return"";	
 		}	
-}
+	}
+	
+	public String getColumnHeader(int colNum, String sheetName) throws Exception{
+		try {
+			String colHeader = getCellData(0, colNum, sheetName);
+			return colHeader;
+		}catch(Exception e) {
+			return "";
+		}
+	}
+	
+	@SuppressWarnings("unlikely-arg-type")
+	public int getColumnCount(String sheetName) {
+		try {
+			XSSFSheet excelWSheet = excelWBook.getSheet(sheetName);
+			XSSFCell cell;
+			int count=0;			
+			do {
+				cell  = excelWSheet.getRow(0).getCell(count);
+				count++;
+			}while((!cell.equals("")));			
+			return count;
+		}catch(Exception e) {
+			return 0;
+		}
+	}
 }

@@ -39,7 +39,7 @@ public class TestFixture {
 	public void simulate() {
 		Product product = new Product(targetSheet, targetProduct);
 		ArrayList<ProductOption> optionsList = new ArrayList<ProductOption>();
-		optionsList = product.extractTaggedOptions(rowCount, optionsList);
+		product.extractTaggedOptions(rowCount, optionsList, excelUtilities);
 	}
 	
 	

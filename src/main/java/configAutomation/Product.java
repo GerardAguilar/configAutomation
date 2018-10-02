@@ -14,28 +14,53 @@ public class Product {
 		productName = targetProduct; 
 	}
 	
-	//TODO: Product.extractTaggedOptions()
-	public ArrayList<ProductOption> extractTaggedOptions(int rowCount, ArrayList<ProductOption> completeList) {
+	public void extractTaggedOptions(int rowCount, ArrayList<ProductOption> completeList, ExcelUtilities excelUtilities) {
 		ArrayList<ProductOption> extracted = new ArrayList<ProductOption>();
 		//find column# from productName
-		//TODO: Product.findColumn()
-		
+		int columnId = getColumnId(excelUtilities);
+		String tempData = "";
 		for(int i=0; i<rowCount; i++) {
 			
 			//if cellData is "x"
+			try {
+				tempData = excelUtilities.getCellData(i, columnId, sheet);
+			} catch (Exception e) {
+				tempData = "";
+				e.printStackTrace();
+			}
 			
-			//then get equivalent from completeOptionsList
-			//TODO ExcelUtilities.getCellData()
-			//TODO create ProductOption from cellData
-			//TODO ProductOption.getOption()
-			//Add to optionsConfiguration
+			if(tempData.equals("x")) {
+				//then get equivalent from completeOptionsList
+				ProductOption optionFromCompleteList = completeList.get(i);
+				//add to optionsConfiguration
+				optionsConfiguration.add(optionFromCompleteList);
+			}
 		}
-		return null;
 	}
 	
 	public ProductOption getOption(int column, int row, String sheetName) {
 		ProductOption productOption = new ProductOption();
 		return productOption;
 		
+	}
+	
+	private int getColumnId(ExcelUtilities excelUtilities) {
+		int columnId = -1;
+		int columnCount = excelUtilities.getColumnCount(sheet);
+		String tempColumnName = "";
+		for(int i=0; i<columnCount; i++ ) {
+			try {
+				tempColumnName = excelUtilities.getCellData(0, i, sheet);
+			} catch (Exception e) {
+				tempColumnName = "";
+				e.printStackTrace();
+			}
+			
+			if(tempColumnName.equals(productName)) {
+				columnId = i;
+				break;
+			}
+		}
+		return columnId;
 	}
 }
