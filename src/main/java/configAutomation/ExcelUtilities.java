@@ -17,10 +17,21 @@ public class ExcelUtilities {
 	public ExcelUtilities(String filename) {
 		initialize(filename);
 	}
-	public int getRowCount() {
-		//TODO: ExcelUtilities.getRowCount()
-		int localRowCount = 0;
-		return localRowCount;
+	public int getRowCount(String targetSheet) {
+		XSSFSheet excelWSheet = excelWBook.getSheet(targetSheet);
+		System.out.println("opening sheet: " + targetSheet + " in "+excelWSheet.toString());		
+		int count=0;
+		try {
+			String cellData;
+			do {
+				cellData = this.getCellData(count,0, excelWSheet);
+				System.out.println("getting cell data: " + cellData + " ["+cellData.length()+"]");
+				count++;
+			}while(cellData.length()>0);
+		}catch(Exception e) {
+			System.out.println("getRowCount failed");
+		}
+		return count;
 	}
 	public void initialize(String filename) {	
 		FileInputStream inputStream;
@@ -36,39 +47,49 @@ public class ExcelUtilities {
 		}
 	}
 	
-	public ArrayList<ProductOption> getInitialOptionsList(int rowCount) {
-		return getOptionsList(1, rowCount);
+	public ArrayList<ProductOption> getInitialOptionsList(int rowCount, String targetSheet) {
+		return getOptionsList(1, rowCount, targetSheet);
 	}
 	
-	public ArrayList<ProductOption> getOptionsList(int column, int rowCount){
+	public ArrayList<ProductOption> getOptionsList(int column, int rowCount, String targetSheet){
 		ArrayList<ProductOption> optionList = new ArrayList<ProductOption>();
+		XSSFSheet excelWSheet = excelWBook.getSheet(targetSheet);
 		for(int i=0; i<rowCount; i++) {
-			ProductOption tempOption = new ProductOption();
-			optionList.add(tempOption);
+			String cellData;
+			try {
+				cellData = this.getCellData(i, column, excelWSheet);
+				ProductOption tempOption = new ProductOption(cellData);
+				optionList.add(tempOption);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		return optionList;
 	}
 		
-	public String getCellData(int RowNum, int ColNum, String sheetName) throws Exception{
-		
+	public String getCellData(int RowNum, int ColNum, XSSFSheet excelWSheet) throws Exception{		
 		try{
-			XSSFSheet excelWSheet = excelWBook.getSheet(sheetName);
-
 			XSSFCell cell = excelWSheet.getRow(RowNum).getCell(ColNum);
-
 			String cellData = cell.getStringCellValue();
-
 			return cellData;
-
 		}catch (Exception e){
-
 			return"";	
 		}	
 	}
 	
-	public String getColumnHeader(int colNum, String sheetName) throws Exception{
+	public String getCellData(int RowNum, int ColNum, String sheetName) throws Exception{
 		try {
-			String colHeader = getCellData(0, colNum, sheetName);
+			XSSFSheet excelWSheet = excelWBook.getSheet(sheetName);
+			String cellData = getCellData(RowNum, ColNum,excelWSheet);
+			return cellData;
+		}catch(Exception e) {
+			return"";
+		}		
+	}
+	
+	public String getColumnHeader(int colNum, XSSFSheet excelWSheet) throws Exception{
+		try {
+			String colHeader = getCellData(0, colNum, excelWSheet);
 			return colHeader;
 		}catch(Exception e) {
 			return "";

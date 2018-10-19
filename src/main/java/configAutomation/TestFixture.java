@@ -25,22 +25,27 @@ public class TestFixture {
 	}	
 	
 	public TestFixture() {
-		//TODO: TestFixture.TestFixture() excel filename
 		filename = "";
-		excelUtilities = new ExcelUtilities(filename);
-		rowCount = excelUtilities.getRowCount();
-		completeOptionsList = excelUtilities.getInitialOptionsList(rowCount);
-		
+		excelUtilities = new ExcelUtilities(filename);		
 	}	
 	
 	//Each simulate call creates one and only one product
 	//targetSheet and targetProduct are set by the Fitnesse Spreadsheet
 	//Each simulate call also looks at the sheet
 	public void simulate() {
+		rowCount = excelUtilities.getRowCount(targetSheet);
+		completeOptionsList = excelUtilities.getInitialOptionsList(rowCount, targetSheet);
+		
 		Product product = new Product(targetSheet, targetProduct);
-		ArrayList<ProductOption> optionsList = new ArrayList<ProductOption>();
-		product.extractTaggedOptions(rowCount, optionsList, excelUtilities);
+		product.extractTaggedOptions(rowCount, completeOptionsList, excelUtilities);
+		navigate(product);
 	}
 	
-	
+	public void navigate(Product product) {
+		int optionCount = product.getOptionCount();
+		for(int i=0; i<optionCount; i++) {
+			ProductOption tempOption = product.getOption(i);
+
+		}
+	}
 }
