@@ -17,6 +17,7 @@ public class ExcelUtilities {
 	public ExcelUtilities(String filename) {
 		initialize(filename);
 	}
+	//need to figure out when to stop this (maybe using the options column?)
 	public int getRowCount(String targetSheet) {
 		XSSFSheet excelWSheet = excelWBook.getSheet(targetSheet);
 		System.out.println("opening sheet: " + targetSheet + " in "+excelWSheet.toString());		
@@ -24,13 +25,16 @@ public class ExcelUtilities {
 		try {
 			String cellData;
 			do {
-				cellData = this.getCellData(count,0, excelWSheet);
+				cellData = this.getCellData(count,1, excelWSheet);
 				System.out.println("getting cell data: " + cellData + " ["+cellData.length()+"]");
-				count++;
+				if(cellData.length()>0) {
+					count++;
+				}
 			}while(cellData.length()>0);
 		}catch(Exception e) {
 			System.out.println("getRowCount failed");
 		}
+		System.out.println("rowCount: " + count);
 		return count;
 	}
 	public void initialize(String filename) {	
@@ -47,25 +51,51 @@ public class ExcelUtilities {
 		}
 	}
 	
+	/*
+	 * Goes through the rows of the target sheet
+	 * Looks for the value on the top leftmost cell and cascades the value down until a new value is found
+	 * As this goes down each row, it also pulls the value on the second column
+	 * It combines both values into a productoption that would get pulled at a later time
+	 */
 	public ArrayList<ProductOption> getInitialOptionsList(int rowCount, String targetSheet) {
-		return getOptionsList(1, rowCount, targetSheet);
-	}
-	
-	public ArrayList<ProductOption> getOptionsList(int column, int rowCount, String targetSheet){
 		ArrayList<ProductOption> optionList = new ArrayList<ProductOption>();
 		XSSFSheet excelWSheet = excelWBook.getSheet(targetSheet);
+		int tempCount =0;
 		for(int i=0; i<rowCount; i++) {
-			String cellData;
-			try {
-				cellData = this.getCellData(i, column, excelWSheet);
-				ProductOption tempOption = new ProductOption(cellData);
-				optionList.add(tempOption);
+			String cellDataMenu="";
+			String cellDataOption="";
+			tempCount++;
+			try {				
+				cellDataMenu = this.getCellData(i, 0, excelWSheet);
+				cellDataOption = this.getCellData(i, 1, excelWSheet);
+				ProductOption newProductOption = new ProductOption(cellDataMenu,cellDataOption);
+				System.out.println(i + ": " + cellDataMenu + ": " + cellDataOption);
+				System.out.println(i + ": " + newProductOption.originalString + ": " + newProductOption.selection);
+				optionList.add(newProductOption);
+				
 			} catch (Exception e) {
-				e.printStackTrace();
+				System.out.println(i+ ": " +e);
 			}
 		}
+		System.out.println("optionList.size(): " + optionList.size() + " | "+ "tempCount: " + tempCount);
 		return optionList;
 	}
+	
+//	public ArrayList<ProductOption> getOptionsList(int column, int rowCount, String targetSheet){
+//		ArrayList<ProductOption> optionList = new ArrayList<ProductOption>();
+//		XSSFSheet excelWSheet = excelWBook.getSheet(targetSheet);
+//		for(int i=0; i<rowCount; i++) {
+//			String cellData;
+//			try {
+//				cellData = this.getCellData(i, column, excelWSheet);			
+//				ProductOption tempOption = new ProductOption(cellData);
+//				optionList.add(tempOption);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//		}
+//		return optionList;
+//	}
 		
 	public String getCellData(int RowNum, int ColNum, XSSFSheet excelWSheet) throws Exception{		
 		try{
@@ -96,19 +126,23 @@ public class ExcelUtilities {
 		}
 	}
 	
-	@SuppressWarnings("unlikely-arg-type")
-	public int getColumnCount(String sheetName) {
+	public int getColumnCount(String sheetName) throws Exception{
+		int count=0;
 		try {
 			XSSFSheet excelWSheet = excelWBook.getSheet(sheetName);
 			XSSFCell cell;
-			int count=0;			
-			do {
+			while(true) {
 				cell  = excelWSheet.getRow(0).getCell(count);
-				count++;
-			}while((!cell.equals("")));			
-			return count;
+				if(cell.equals("")) {
+					break;
+				}else {
+					count++;
+				}
+			}
 		}catch(Exception e) {
-			return 0;
+			System.out.println("getColumnCount ended: " + e);
 		}
+
+		return count;
 	}
 }

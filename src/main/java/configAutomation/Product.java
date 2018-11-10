@@ -7,6 +7,7 @@ public class Product {
 	String sheetName;
 	String productName;
 	
+	//TODO: Product should make use of a 2D ArrayList
 	public Product(String targetSheet, String targetProduct) {
 		optionsConfiguration = new ArrayList<ProductOption>(); 
 		sheetName = targetSheet;
@@ -14,6 +15,7 @@ public class Product {
 	}
 	
 	public int getOptionCount() {
+		System.out.println("optionsConfiguration.size(): "+optionsConfiguration.size());
 		return optionsConfiguration.size();
 	}
 	
@@ -21,11 +23,13 @@ public class Product {
 		//find column# from productName
 		int columnId = getColumnId(excelUtilities);
 		String tempData = "";
-		for(int i=0; i<rowCount; i++) {
+		//start with one to skip the header
+		System.out.println("rowCount: " + rowCount);
+		for(int i=1; i<rowCount; i++) {
 			
-			//if cellData is "x"
 			try {
 				tempData = excelUtilities.getCellData(i, columnId, sheetName);
+				System.out.println("extractTaggedOption["+columnId+"]["+i+"]: " + tempData);
 			} catch (Exception e) {
 				tempData = "";
 				e.printStackTrace();
@@ -35,6 +39,7 @@ public class Product {
 				//then get equivalent from completeOptionsList
 				ProductOption optionFromCompleteList = completeOptionsList.get(i);
 				//add to optionsConfiguration
+				System.out.println("Adding "+optionFromCompleteList.originalString+" to optionsConfiguration");				
 				optionsConfiguration.add(optionFromCompleteList);
 			}
 		}
@@ -50,7 +55,14 @@ public class Product {
 	 */
 	private int getColumnId(ExcelUtilities excelUtilities) {
 		int columnId = -1;
-		int columnCount = excelUtilities.getColumnCount(sheetName);
+		int columnCount;
+		try {
+			columnCount = excelUtilities.getColumnCount(sheetName);
+		} catch (Exception e1) {
+			System.out.println("getColumnId: columnCount error");
+			columnCount=0;
+			e1.printStackTrace();
+		}
 		String tempColumnName = "";
 		for(int i=0; i<columnCount; i++ ) {
 			try {
@@ -59,11 +71,13 @@ public class Product {
 				tempColumnName = "";
 				e.printStackTrace();
 			}
-			
+			System.out.println(i + ": " + productName + "=? " +tempColumnName);
 			if(tempColumnName.equals(productName)) {
 				columnId = i;
 				break;
 			}
+			
+			
 		}
 		return columnId;
 	}
