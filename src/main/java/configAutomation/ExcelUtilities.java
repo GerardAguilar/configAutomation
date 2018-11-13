@@ -61,7 +61,7 @@ public class ExcelUtilities {
 		ArrayList<ProductOption> optionList = new ArrayList<ProductOption>();
 		XSSFSheet excelWSheet = excelWBook.getSheet(targetSheet);
 		int tempCount =0;
-		for(int i=0; i<rowCount; i++) {
+		for(int i=1; i<rowCount; i++) {
 			String cellDataMenu="";
 			String cellDataOption="";
 			tempCount++;
@@ -69,15 +69,18 @@ public class ExcelUtilities {
 				cellDataMenu = this.getCellData(i, 0, excelWSheet);
 				cellDataOption = this.getCellData(i, 1, excelWSheet);
 				ProductOption newProductOption = new ProductOption(cellDataMenu,cellDataOption);
-				System.out.println(i + ": " + cellDataMenu + ": " + cellDataOption);
-				System.out.println(i + ": " + newProductOption.originalString + ": " + newProductOption.selection);
+//				System.out.println(i + ": " + cellDataMenu + ": " + cellDataOption);
+//				System.out.println(i + ": " + newProductOption.originalString + ": " + newProductOption.selection);
 				optionList.add(newProductOption);
 				
 			} catch (Exception e) {
 				System.out.println(i+ ": " +e);
 			}
 		}
-		System.out.println("optionList.size(): " + optionList.size() + " | "+ "tempCount: " + tempCount);
+//		System.out.println("optionList.size(): " + optionList.size() + " | "+ "tempCount: " + tempCount);
+		for(int i=0; i<optionList.size(); i++) {
+			System.out.println("[option] " + i + ": " +optionList.get(i).combinedString);
+		}
 		return optionList;
 	}
 	

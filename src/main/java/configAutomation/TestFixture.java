@@ -63,27 +63,27 @@ public class TestFixture {
 			action = tempOption.action;
 			attributeIdPair = tempOption.attributeIdPair;
 			selection = tempOption.selection;
-			switch(action) {
-			case "select":
+			System.out.print("\n" + 
+							"action: "+action+"\n" +
+							"attributeIdPair: "+attributeIdPair+"\n" +
+							"selection: " +selection+"\n"
+					);
+			if(action.equals("select")) {
 				System.out.println("select");
 				automationTools.select(attributeIdPair, selection);
 				automationTools.screenshot(product.productName,i+"");
-				break;
-			case "click":
+			}else if(action.equals("click")) {
 				System.out.println("click");
 				automationTools.click(attributeIdPair, selection);
 				automationTools.screenshot(product.productName,i+"");
-				break;
-			case "mouse":
+			}else if(action.equals("mouse")) {
 				System.out.println("mouse");
 				automationTools.mouse(attributeIdPair, selection);
 				automationTools.screenshot(product.productName,i+"");
-				break;
-			default:
+			}
+			else {
 				System.out.println(action + " could not be found in the available actions");
 			}
 		}
 	}
-	
-
 }

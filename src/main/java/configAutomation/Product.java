@@ -25,8 +25,7 @@ public class Product {
 		String tempData = "";
 		//start with one to skip the header
 		System.out.println("rowCount: " + rowCount);
-		for(int i=1; i<rowCount; i++) {
-			
+		for(int i=0; i<rowCount; i++) {			
 			try {
 				tempData = excelUtilities.getCellData(i, columnId, sheetName);
 				System.out.println("extractTaggedOption["+columnId+"]["+i+"]: " + tempData);
@@ -37,11 +36,16 @@ public class Product {
 			
 			if(tempData.equals("x")) {
 				//then get equivalent from completeOptionsList
-				ProductOption optionFromCompleteList = completeOptionsList.get(i);
+				ProductOption optionFromCompleteList = completeOptionsList.get(i-1);
+				System.out.println("Add to options: " + optionFromCompleteList.combinedString);
 				//add to optionsConfiguration
-				System.out.println("Adding "+optionFromCompleteList.originalString+" to optionsConfiguration");				
+//				System.out.println("Adding "+optionFromCompleteList.originalString+" to optionsConfiguration");				
 				optionsConfiguration.add(optionFromCompleteList);
 			}
+		}
+		
+		for(int i=0; i<optionsConfiguration.size(); i++) {
+			System.out.println("[config] " + i + ": " +optionsConfiguration.get(i).combinedString);
 		}
 	}
 	
