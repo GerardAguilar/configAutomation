@@ -225,12 +225,18 @@ public class AutomationTools {
 	}
 	
 	//TODO: Mouse manipulation that focuses on the interaction of the canvas, may need to be on a different class
-	public void mouse(String selection, String actionType) {
+	public void mouse(String actionType, String selection) {
 		int xOffset=0;
 		int yOffset=0;
 		if(!selection.equals("")) {
-			xOffset = Integer.parseInt(selection.split(",")[0]);
-			yOffset = Integer.parseInt(selection.split(",")[1]);			
+			try {
+				xOffset = Integer.parseInt(selection.split(",")[0]);
+				yOffset = Integer.parseInt(selection.split(",")[1]);			
+			}catch(NumberFormatException e) {
+				System.out.println(selection + " couldn't be parsed into two separate Integers");
+				xOffset = 0;
+				yOffset = 0;
+			}
 			if(actionType.equals("move")) {
 				mouseMove(xOffset, yOffset);				
 			}else if(actionType.equals("drag")) {
@@ -285,18 +291,31 @@ public class AutomationTools {
 	}	
 	
 	@SuppressWarnings("unused")
-	public void screenshot(String sheetName, String configName) {
-//		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//		Long timestamp = (new Timestamp(System.currentTimeMillis())).getTime();
-////		String currentFilename = fitnesseRootDirectory+""+navId+".png";
-//		String currentFilename = fitnesseRootDirectory+""+sheetName+"_"+configName+".png";
-//		
-//		try {
-//			FileUtils.copyFile(screenshotFile, new File(currentFilename));					
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}					
+	public String screenshot(String sheetName, String configName) {
+		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		Long timestamp = (new Timestamp(System.currentTimeMillis())).getTime();
+		String currentFilename = fitnesseRootDirectory+""+sheetName+"_"+configName+".png";
+		
+		try {
+			FileUtils.copyFile(screenshotFile, new File(currentFilename));					
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
+		
+		return image(sheetName, configName);
 	}
+	
+	//I got a slideshow working?
+	public String image(String sheetName, String configName) {
+		String slideShowBeginning = "<div class='slideshow-container'>";
+		String appendedImageString = "<div class='mySliders fade'><img src='http://localhost/files/"+sheetName+"_"+configName+".png' style='width:100%'></div>";
+		String slideShowEnding = "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>"+
+								"<a class='next' onclick='pluSlides(1)'>&#10095;</a>"+
+								"</div>";
+		String returnMe = slideShowBeginning + appendedImageString + slideShowEnding;
+		return returnMe;
+	}	
+
 	
 
 }
