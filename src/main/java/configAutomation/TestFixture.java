@@ -37,13 +37,14 @@ public class TestFixture {
 	//Each simulate call creates one and only one product
 	//targetSheet and targetProduct are set by the Fitnesse Spreadsheet
 	//Each simulate call also looks at the sheet
-	public void simulate() {
+	public String simulate() {
 		rowCount = excelUtilities.getRowCount(targetSheet);
 		completeOptionsList = excelUtilities.getInitialOptionsList(rowCount, targetSheet);
 				
 		Product product = new Product(targetSheet, targetProduct);
 		product.extractTaggedOptions(rowCount, completeOptionsList, excelUtilities);
 		navigate(product);
+		return automationTools.screenshot(targetSheet, targetProduct);
 	}
 	
 	//Modifies the website based on the action:attribute='id' of each product option
@@ -85,5 +86,6 @@ public class TestFixture {
 				System.out.println(action + " could not be found in the available actions");
 			}
 		}
+		
 	}
 }

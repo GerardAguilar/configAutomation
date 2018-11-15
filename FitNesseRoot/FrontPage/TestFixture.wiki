@@ -79,7 +79,6 @@
 
 !|TestFixture                                             |
 |TargetSheet|TargetProduct                      |simulate?|
-|AutoConfig |Gliding 200 Series Perma-Shield 1:1 Config1|         |
-|AutoConfig |Gliding 200 Series Perma-Shield 1:1 Config2|         |
+|AutoConfig |A||
 
 
