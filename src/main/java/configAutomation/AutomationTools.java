@@ -37,7 +37,7 @@ public class AutomationTools {
 	public String fitnesseRootDirectory;
 	public String homePage;
 	String chromeBinaryLocation;
-
+	int millisecondsToWait = 10000;
 	
 	public AutomationTools() {
 		fitnesseRootDirectory = "C:\\eclipse-workspace\\configAutomation\\FitNesseRoot\\files\\";
@@ -94,7 +94,7 @@ public class AutomationTools {
 //				.ignoring(ElementNotVisibleException.class);
 		
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-			    .withTimeout(Duration.ofMillis(4000))
+			    .withTimeout(Duration.ofMillis(millisecondsToWait))
 			    .pollingEvery(Duration.ofMillis(500))
 //			    .withTimeout(6, TimeUnit.SECONDS)
 //			    .pollingEvery(1, TimeUnit.SECONDS)
@@ -140,7 +140,7 @@ public class AutomationTools {
 //				.ignoring(ElementNotVisibleException.class);
 		
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-			    .withTimeout(Duration.ofMillis(4000))
+			    .withTimeout(Duration.ofMillis(millisecondsToWait))
 			    .pollingEvery(Duration.ofMillis(500))
 //			    .withTimeout(6, TimeUnit.SECONDS)
 //			    .pollingEvery(1, TimeUnit.SECONDS)
@@ -190,7 +190,7 @@ public class AutomationTools {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 //			    .withTimeout(6, TimeUnit.SECONDS)
 //			    .pollingEvery(1, TimeUnit.SECONDS)
-			    .withTimeout(Duration.ofSeconds(4))
+			    .withTimeout(Duration.ofMillis(millisecondsToWait))
 			    .pollingEvery(Duration.ofMillis(500))
 			    .ignoring(NoSuchElementException.class);
 		
@@ -307,13 +307,14 @@ public class AutomationTools {
 	
 	//I got a slideshow working?
 	public String image(String sheetName, String configName) {
-		String slideShowBeginning = "<div class='slideshow-container'>";
-		String appendedImageString = "<div class='mySliders fade'><img src='http://localhost/files/"+sheetName+"_"+configName+".png' style='width:100%'></div>";
-		String slideShowEnding = "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>"+
-								"<a class='next' onclick='pluSlides(1)'>&#10095;</a>"+
-								"</div>";
-		String returnMe = slideShowBeginning + appendedImageString + slideShowEnding;
-		return returnMe;
+//		String slideShowBeginning = "<div class='slideshow-container'>";
+		String appendedImageString = "<div><img src='http://localhost/files/"+sheetName+"_"+configName+".png' style='height:100%'></div>";
+//		String slideShowEnding = "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>"+
+//								"<a class='next' onclick='pluSlides(1)'>&#10095;</a>"+
+//								"</div>";
+//		String returnMe = slideShowBeginning + appendedImageString + slideShowEnding;
+//		return returnMe;
+		return appendedImageString;
 	}	
 
 	

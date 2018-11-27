@@ -79,6 +79,6 @@
 
 !|TestFixture                                             |
 |TargetSheet|TargetProduct                      |simulate?|
+|AutoConfig |B||
 |AutoConfig |A||
-
 
