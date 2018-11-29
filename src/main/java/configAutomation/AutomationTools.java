@@ -1,6 +1,8 @@
 package configAutomation;
 
 import java.awt.AWTException;
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsEnvironment;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Robot;
@@ -14,6 +16,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.math.Rational;
+import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.ElementNotVisibleException;
@@ -29,6 +35,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
+import static org.monte.media.AudioFormatKeys.*;
+import static org.monte.media.VideoFormatKeys.*;
 
 import com.google.common.base.Function;
 
@@ -38,11 +46,14 @@ public class AutomationTools {
 	public String homePage;
 	String chromeBinaryLocation;
 	int millisecondsToWait = 10000;
+	private ScreenRecorder screenRecorder;
 	
 	public AutomationTools() {
 		fitnesseRootDirectory = "C:\\eclipse-workspace\\configAutomation\\FitNesseRoot\\files\\";
 		chromeBinaryLocation = "C:\\GoogleChromePortable\\GoogleChromePortable.exe";
 		homePage = "https://andersen.inhance.io/app/test.html";
+		
+		File fitnesseRootDirectoryFile = new File(fitnesseRootDirectory);
 //		try {
 //			setupChrome();
 //		} catch (Exception e) {
@@ -51,6 +62,28 @@ public class AutomationTools {
 //		}
 		driver = new ChromeDriver();
 		driver.get(homePage);
+		
+		GraphicsConfiguration gc = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
+        try {
+			screenRecorder = new ScreenRecorder(gc,
+			null,
+			new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_QUICKTIME),
+			new Format(	MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+						CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+						DepthKey, (int)24, FrameRateKey, Rational.valueOf(15),
+						QualityKey, 1.0f,
+						KeyFrameIntervalKey, (int) (15 * 60)),
+			new Format(	MediaTypeKey, MediaType.VIDEO, EncodingKey,"black",
+						FrameRateKey, Rational.valueOf(30)),
+			null,
+			fitnesseRootDirectoryFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 //	//pairs chrome driver with chrome binary
@@ -87,23 +120,15 @@ public class AutomationTools {
 //	}
 	
 	public void waitForPresence(final String customAttributeIdPair) {
-//		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-//			    .withTimeout(Duration.ofSeconds(2))
-//			    .pollingEvery(Duration.ofMillis(500))
-//			    .ignoring(NoSuchElementException.class)
-//				.ignoring(ElementNotVisibleException.class);
 		
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 			    .withTimeout(Duration.ofMillis(millisecondsToWait))
 			    .pollingEvery(Duration.ofMillis(500))
-//			    .withTimeout(6, TimeUnit.SECONDS)
-//			    .pollingEvery(1, TimeUnit.SECONDS)
 			    .ignoring(NoSuchElementException.class);
 				
 		//Check for element being present
 		wait.until(new Function<WebDriver, Boolean>(){
 			public Boolean apply(WebDriver driverCopy) {
-//				System.out.println("waitFor(): " + customAttributeIdPair);
 				Boolean elementIsPresent = false;
 				try {
 					WebElement tempElement = driver.findElement(By.cssSelector("*["+customAttributeIdPair+"]"));	
@@ -133,23 +158,15 @@ public class AutomationTools {
 	}
 	
 	public void waitForVisibility(final String customAttributeIdPair) {
-//		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-//			    .withTimeout(Duration.ofSeconds(2))
-//			    .pollingEvery(Duration.ofMillis(500))
-//			    .ignoring(NoSuchElementException.class)
-//				.ignoring(ElementNotVisibleException.class);
 		
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 			    .withTimeout(Duration.ofMillis(millisecondsToWait))
 			    .pollingEvery(Duration.ofMillis(500))
-//			    .withTimeout(6, TimeUnit.SECONDS)
-//			    .pollingEvery(1, TimeUnit.SECONDS)
 			    .ignoring(NoSuchElementException.class);
 				
 		//Check for element being present
 		wait.until(new Function<WebDriver, Boolean>(){
 			public Boolean apply(WebDriver driverCopy) {
-//				System.out.println("waitFor(): " + customAttributeIdPair);
 				Boolean elementIsVisible = false;
 				try {
 					WebElement tempElement = driver.findElement(By.cssSelector("*["+customAttributeIdPair+"]"));	
@@ -181,15 +198,8 @@ public class AutomationTools {
 	public void select(final String customAttributeIdPair, String value) {
 		waitForPresence(customAttributeIdPair);
 		waitForVisibility(customAttributeIdPair);
-//		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)		
-//			    .withTimeout(Duration.ofSeconds(2))
-//			    .pollingEvery(Duration.ofMillis(500))
-//			    .ignoring(NoSuchElementException.class)
-//				.ignoring(ElementNotVisibleException.class);
-		
+
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-//			    .withTimeout(6, TimeUnit.SECONDS)
-//			    .pollingEvery(1, TimeUnit.SECONDS)
 			    .withTimeout(Duration.ofMillis(millisecondsToWait))
 			    .pollingEvery(Duration.ofMillis(500))
 			    .ignoring(NoSuchElementException.class);
@@ -288,10 +298,10 @@ public class AutomationTools {
 		WebElement target = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/canvas[1]"));
 		Actions builder = (new Actions(driver)).dragAndDropBy(target, xOffset, yOffset);
 		builder.perform();
-	}	
-	
+	}		
+
 	@SuppressWarnings("unused")
-	public String screenshot(String sheetName, String configName) {
+	public String screenshot(String sheetName, String configName, int optionCount) {
 		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		Long timestamp = (new Timestamp(System.currentTimeMillis())).getTime();
 		String currentFilename = fitnesseRootDirectory+""+sheetName+"_"+configName+".png";
@@ -300,22 +310,31 @@ public class AutomationTools {
 			FileUtils.copyFile(screenshotFile, new File(currentFilename));					
 		} catch (IOException e) {
 			e.printStackTrace();
-		}		
-		
-		return image(sheetName, configName);
+		}				
+		return image(sheetName, configName, optionCount);
 	}
 	
-	//I got a slideshow working?
-	public String image(String sheetName, String configName) {
-//		String slideShowBeginning = "<div class='slideshow-container'>";
-		String appendedImageString = "<div><img src='http://localhost/files/"+sheetName+"_"+configName+".png' style='height:100%'></div>";
-//		String slideShowEnding = "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>"+
-//								"<a class='next' onclick='pluSlides(1)'>&#10095;</a>"+
-//								"</div>";
-//		String returnMe = slideShowBeginning + appendedImageString + slideShowEnding;
-//		return returnMe;
-		return appendedImageString;
+//  <div class="mySlides fade">
+//		<div class="numbertext">2 / 3</div>
+//		<img src="img2.jpg" style="width:100%">
+//		<div class="text">Caption Two</div>
+//	</div>
+	public String image(String sheetName, String configName, int optionCount) {
+		optionCount--;
+		String imageString = "<div class=\"numbertext\">"+configName +"/" + optionCount + "</div><div class='mySlides'><img src='http://localhost/files/"+sheetName+"_"+configName+".png' style='width:100%'></div><div class=\"text\">Caption Text</div>";
+		return imageString;
 	}	
+	
+	//from https://stackoverflow.com/questions/29415669/screen-recording-of-a-test-execution-in-selenium-using-java
+	public void startRecording() throws Exception
+	{
+		this.screenRecorder.start();
+	}
+	public void stopRecording() throws Exception
+	{
+		this.screenRecorder.stop();
+		System.out.println(this.screenRecorder.getCreatedMovieFiles().toString());
+	}
 
 	
 

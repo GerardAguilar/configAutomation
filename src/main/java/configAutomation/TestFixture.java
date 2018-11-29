@@ -10,6 +10,7 @@ public class TestFixture {
 	ArrayList<ProductOption> completeOptionsList;
 	AutomationTools automationTools;
 	int rowCount;
+	String appendedImageString;
 	
 	//Fitnesse attributes and methods
 	String targetSheet;
@@ -31,20 +32,40 @@ public class TestFixture {
 		filename = "C:\\Users\\gaguilar\\Desktop\\Andersen.xlsx";
 		excelUtilities = new ExcelUtilities(filename);		
 		automationTools = new AutomationTools();
-	}	
-	
+
+	}		
 	
 	//Each simulate call creates one and only one product
 	//targetSheet and targetProduct are set by the Fitnesse Spreadsheet
 	//Each simulate call also looks at the sheet
+	//This call is made for every product column
 	public String simulate() {
+		try {
+			automationTools.startRecording();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		appendedImageString = "";
 		rowCount = excelUtilities.getRowCount(targetSheet);
 		completeOptionsList = excelUtilities.getInitialOptionsList(rowCount, targetSheet);
 				
 		Product product = new Product(targetSheet, targetProduct);
 		product.extractTaggedOptions(rowCount, completeOptionsList, excelUtilities);
-		navigate(product);
-		return automationTools.screenshot(targetSheet, targetProduct);
+		navigate(product);		
+		
+		String slideShowBeginning = "<video controls width='1200' height='1920' name='Test' src='http://localhost/files/a.mov'></video><div class='slideshow-container'>";
+		String slideShowEnding = "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>"+
+								"<a class='next' onclick='pluSlides(1)'>&#10095;</a>"+
+								"</div>";
+		String returnMe = slideShowBeginning + appendedImageString + slideShowEnding;			
+		try {
+			automationTools.stopRecording();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return returnMe;
 	}
 	
 	//Modifies the website based on the action:attribute='id' of each product option
@@ -53,6 +74,7 @@ public class TestFixture {
 	//Then, find that specific web component by id
 	//Do this for all of the products options
 	//Ex: click:id='ui-btn'
+
 	public void navigate(Product product) {
 		int optionCount = product.getOptionCount();
 		String action;
@@ -72,20 +94,19 @@ public class TestFixture {
 			if(action.equals("select")) {
 				System.out.println("select");
 				automationTools.select(attributeIdPair, selection);
-				automationTools.screenshot(product.productName,i+"");
+				appendedImageString = appendedImageString + automationTools.screenshot(product.productName,i+"",optionCount);
 			}else if(action.equals("click")) {
 				System.out.println("click");
 				automationTools.click(attributeIdPair, selection);
-				automationTools.screenshot(product.productName,i+"");
+				appendedImageString = appendedImageString + automationTools.screenshot(product.productName,i+"",optionCount);
 			}else if(action.equals("mouse")) {
 				System.out.println("mouse");
 				automationTools.mouse(attributeIdPair, selection);
-				automationTools.screenshot(product.productName,i+"");
+				appendedImageString = appendedImageString + automationTools.screenshot(product.productName,i+"",optionCount);
 			}
 			else {
 				System.out.println(action + " could not be found in the available actions");
 			}
 		}
-		
 	}
 }
