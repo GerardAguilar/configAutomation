@@ -325,7 +325,9 @@ public class AutomationTools {
 //	</div>
 	public String image(String sheetName, String configName, int optionCount) {
 		optionCount--;
-		String imageString = "<div class=\"numbertext\">"+configName +"/" + optionCount + "</div><div class='mySlides'><img src='http://localhost/files/"+sheetName+"_"+configName+".png' style='width:100%'></div><div class=\"text\">Caption Text</div>";
+//		String imageString = "<div class=\"numbertext\">"+configName +"/" + optionCount + "</div><div class='mySlides'><img src='http://localhost/files/"+sheetName+"_"+configName+".png' style='width:100%'></div><div class=\"text\">Caption Text</div>";
+		String imageString ="<div><img src='http://localhost/files/"+sheetName+"_"+configName+".png' style='width:100%'></div>";
+		
 		return imageString;
 	}	
 	

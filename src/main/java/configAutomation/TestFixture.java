@@ -64,7 +64,7 @@ public class TestFixture {
 //								"<a class='next' onclick='pluSlides(1)'>&#10095;</a>"+
 //								"</div>";
 //		String returnMe = videoString+ slideShowBeginning + appendedImageString + slideShowEnding;			
-		String returnMe = videoString;
+		String returnMe = "<div>" + videoString+appendedImageString + "</div>";
 		try {
 			automationTools.stopRecording();
 		} catch (Exception e) {
@@ -100,17 +100,16 @@ public class TestFixture {
 			if(action.equals("select")) {
 				System.out.println("select");
 				automationTools.select(attributeIdPair, selection);
-				appendedImageString = appendedImageString + automationTools.screenshot(product.productName,i+"",optionCount);
+				appendedImageString = automationTools.screenshot(product.productName,i+"",optionCount);
 			}else if(action.equals("click")) {
 				System.out.println("click");
 				automationTools.click(attributeIdPair, selection);
-				appendedImageString = appendedImageString + automationTools.screenshot(product.productName,i+"",optionCount);
+				appendedImageString = automationTools.screenshot(product.productName,i+"",optionCount);
 			}else if(action.equals("mouse")) {
 				System.out.println("mouse");
 				automationTools.mouse(attributeIdPair, selection);
-				appendedImageString = appendedImageString + automationTools.screenshot(product.productName,i+"",optionCount);
-			}
-			else {
+				appendedImageString = automationTools.screenshot(product.productName,i+"",optionCount);
+			}else {
 				System.out.println(action + " could not be found in the available actions");
 			}
 		}

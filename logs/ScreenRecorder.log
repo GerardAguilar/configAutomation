@@ -1,8 +1,8 @@
-2018-11-29 18:29:42 INFO  Info:77 - vlcj: 3.10.1
-2018-11-29 18:29:42 INFO  Info:78 - java: 1.8.0_161 Oracle Corporation
-2018-11-29 18:29:42 INFO  Info:79 - java home: C:\Program Files\Java\jdk1.8.0_161\jre
-2018-11-29 18:29:42 INFO  Info:80 - os: Windows 10 10.0 amd64
-2018-11-29 18:29:42 INFO  LibVlcFactory:171 - vlc: 3.0.4 Vetinari, changeset 3.0.4-0-gf615db6332
-2018-11-29 18:29:42 INFO  LibVlcFactory:172 - libvlc: libvlc.dll
-2018-11-29 18:29:44 INFO  VlcScreenRecorder:52 - start recording, C:\eclipse-workspace\configAutomation\FitNesseRoot\files\Gliding A-Series Frenchwood 1.mp4
-2018-11-29 18:30:19 INFO  VlcScreenRecorder:57 - stop recording 
+2018-11-29 19:32:37 INFO  Info:77 - vlcj: 3.10.1
+2018-11-29 19:32:37 INFO  Info:78 - java: 1.8.0_161 Oracle Corporation
+2018-11-29 19:32:37 INFO  Info:79 - java home: C:\Program Files\Java\jdk1.8.0_161\jre
+2018-11-29 19:32:37 INFO  Info:80 - os: Windows 10 10.0 amd64
+2018-11-29 19:32:37 INFO  LibVlcFactory:171 - vlc: 3.0.4 Vetinari, changeset 3.0.4-0-gf615db6332
+2018-11-29 19:32:37 INFO  LibVlcFactory:172 - libvlc: libvlc.dll
+2018-11-29 19:32:38 INFO  VlcScreenRecorder:58 - start recording, C:\eclipse-workspace\configAutomation\FitNesseRoot\files\Gliding A-Series Frenchwood 1.mp4
+2018-11-29 19:33:09 INFO  VlcScreenRecorder:63 - stop recording 
