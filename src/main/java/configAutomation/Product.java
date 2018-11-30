@@ -6,12 +6,22 @@ public class Product {
 	ArrayList<ProductOption> optionsConfiguration;
 	String sheetName;
 	String productName;
+	String productNameParsed;
 	
 	//TODO: Product should make use of a 2D ArrayList
 	public Product(String targetSheet, String targetProduct) {
 		optionsConfiguration = new ArrayList<ProductOption>(); 
 		sheetName = targetSheet;
-		productName = targetProduct; 
+		productName = targetProduct;//may need to parse out characters that can't be used in a filename 
+		productNameParsed = productName.replace('/','_')
+										.replace('\\','_')
+										.replace(':','_')
+										.replace('*','_')
+										.replace('?','_')
+										.replace('\"','_')
+										.replace('>','_')
+										.replace('<','_')
+										.replace('|','_');
 	}
 	
 	public int getOptionCount() {

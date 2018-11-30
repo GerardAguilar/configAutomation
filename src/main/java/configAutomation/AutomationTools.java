@@ -46,7 +46,8 @@ public class AutomationTools {
 	public String homePage;
 	String chromeBinaryLocation;
 	int millisecondsToWait = 10000;
-	private ScreenRecorder screenRecorder;
+//	private ScreenRecorder screenRecorder;
+	VlcScreenRecorder recorder;
 	
 	public AutomationTools() {
 		fitnesseRootDirectory = "C:\\eclipse-workspace\\configAutomation\\FitNesseRoot\\files\\";
@@ -63,27 +64,30 @@ public class AutomationTools {
 		driver = new ChromeDriver();
 		driver.get(homePage);
 		
-		GraphicsConfiguration gc = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
-        try {
-			screenRecorder = new ScreenRecorder(gc,
-			null,
-			new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_QUICKTIME),
-			new Format(	MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-						CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-						DepthKey, (int)24, FrameRateKey, Rational.valueOf(15),
-						QualityKey, 1.0f,
-						KeyFrameIntervalKey, (int) (15 * 60)),
-			new Format(	MediaTypeKey, MediaType.VIDEO, EncodingKey,"black",
-						FrameRateKey, Rational.valueOf(30)),
-			null,
-			fitnesseRootDirectoryFile);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		recorder = new VlcScreenRecorder();
+		recorder.setVideoSubdirectory("\\FitNesseRoot\\files\\");
+		
+//		GraphicsConfiguration gc = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
+//        try {
+//			screenRecorder = new ScreenRecorder(gc,
+//			null,
+//			new Format(	MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
+//			new Format(	MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+//						CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+//						DepthKey, (int)24, FrameRateKey, Rational.valueOf(15),
+//						QualityKey, 1.0f,
+//						KeyFrameIntervalKey, (int) (15 * 60)),
+//			new Format(	MediaTypeKey, MediaType.VIDEO, EncodingKey,"black",
+//						FrameRateKey, Rational.valueOf(30)),
+//			null,
+//			fitnesseRootDirectoryFile);//this is where the movie is written into
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (AWTException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
 	}
 //	//pairs chrome driver with chrome binary
@@ -325,16 +329,27 @@ public class AutomationTools {
 		return imageString;
 	}	
 	
-	//from https://stackoverflow.com/questions/29415669/screen-recording-of-a-test-execution-in-selenium-using-java
-	public void startRecording() throws Exception
-	{
-		this.screenRecorder.start();
+//	//from https://stackoverflow.com/questions/29415669/screen-recording-of-a-test-execution-in-selenium-using-java
+//	public void startRecording() throws Exception
+//	{
+//		this.screenRecorder.start();
+//	}
+//	public void stopRecording() throws Exception
+//	{
+//		this.screenRecorder.stop();
+//		System.out.println(this.screenRecorder.getCreatedMovieFiles().toString());
+//	}
+	
+	//http://www.experimentalqa.com/2017/11/record-selenium-test-video-in-mp4.html
+	public void startRecording(String testName) {
+		// TODO Auto-generated method stub
+		recorder.startRecording(testName);
 	}
-	public void stopRecording() throws Exception
-	{
-		this.screenRecorder.stop();
-		System.out.println(this.screenRecorder.getCreatedMovieFiles().toString());
+	public void stopRecording() {
+		recorder.stopRecording();
+//		recorder.releaseRecordingResources();
 	}
+
 
 	
 

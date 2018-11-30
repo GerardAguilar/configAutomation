@@ -40,25 +40,31 @@ public class TestFixture {
 	//Each simulate call also looks at the sheet
 	//This call is made for every product column
 	public String simulate() {
-		try {
-			automationTools.startRecording();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
 		appendedImageString = "";
 		rowCount = excelUtilities.getRowCount(targetSheet);
 		completeOptionsList = excelUtilities.getInitialOptionsList(rowCount, targetSheet);
 				
 		Product product = new Product(targetSheet, targetProduct);
 		product.extractTaggedOptions(rowCount, completeOptionsList, excelUtilities);
-		navigate(product);		
 		
-		String slideShowBeginning = "<video controls width='1200' height='1920' name='Test' src='http://localhost/files/a.mov'></video><div class='slideshow-container'>";
-		String slideShowEnding = "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>"+
-								"<a class='next' onclick='pluSlides(1)'>&#10095;</a>"+
-								"</div>";
-		String returnMe = slideShowBeginning + appendedImageString + slideShowEnding;			
+		try {
+			automationTools.startRecording(product.productNameParsed);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		navigate(product);		
+		String videoString = "<video width='960' height='640' controls='controls'>" + 
+				"<source src=\"http://localhost/files/"+ product.productNameParsed +".mp4\" type='video/mp4'>" + 
+				"</video>";
+//		String slideShowBeginning = "<div class='slideshow-container'>";
+//		String slideShowEnding = "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>"+
+//								"<a class='next' onclick='pluSlides(1)'>&#10095;</a>"+
+//								"</div>";
+//		String returnMe = videoString+ slideShowBeginning + appendedImageString + slideShowEnding;			
+		String returnMe = videoString;
 		try {
 			automationTools.stopRecording();
 		} catch (Exception e) {
