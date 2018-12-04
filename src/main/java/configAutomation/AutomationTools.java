@@ -58,7 +58,6 @@ public class AutomationTools {
 //		try {
 //			setupChrome();
 //		} catch (Exception e) {
-//			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
 		driver = new ChromeDriver();
@@ -82,10 +81,8 @@ public class AutomationTools {
 //			null,
 //			fitnesseRootDirectoryFile);//this is where the movie is written into
 //		} catch (IOException e) {
-//			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		} catch (AWTException e) {
-//			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
 
@@ -344,7 +341,6 @@ public class AutomationTools {
 	
 	//http://www.experimentalqa.com/2017/11/record-selenium-test-video-in-mp4.html
 	public void startRecording(String testName) {
-		// TODO Auto-generated method stub
 		recorder.startRecording(testName);
 	}
 	public void stopRecording() {

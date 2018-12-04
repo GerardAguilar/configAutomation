@@ -29,10 +29,10 @@ public class TestFixture {
 	}	
 	
 	public TestFixture() {
+		//TODO: Change excel file to account for being in the resource folder instead, or at least have a configurable location
 		filename = "C:\\Users\\gaguilar\\Desktop\\Andersen.xlsx";
 		excelUtilities = new ExcelUtilities(filename);		
 		automationTools = new AutomationTools();
-
 	}		
 	
 	//Each simulate call creates one and only one product
@@ -51,7 +51,6 @@ public class TestFixture {
 		try {
 			automationTools.startRecording(product.productNameParsed);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -68,7 +67,6 @@ public class TestFixture {
 		try {
 			automationTools.stopRecording();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return returnMe;
