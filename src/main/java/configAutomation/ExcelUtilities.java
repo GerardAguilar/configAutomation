@@ -16,6 +16,7 @@ public class ExcelUtilities {
 
 	public ExcelUtilities(String filename) {
 		initialize(filename);
+		System.out.println("ExcelUtilities Initializing: " + filename);
 	}
 	//need to figure out when to stop this (maybe using the options column?)
 	public int getRowCount(String targetSheet) {

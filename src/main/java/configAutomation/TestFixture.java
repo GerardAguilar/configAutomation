@@ -3,7 +3,6 @@ package configAutomation;
 import java.util.ArrayList;
 
 
-
 public class TestFixture {
 	String filename;
 	ExcelUtilities excelUtilities;
@@ -17,16 +16,18 @@ public class TestFixture {
 	String targetProduct;	
 	public void setTargetSheet(String temp) {
 		targetSheet = temp;
+		System.out.println("Target Sheet = " + targetSheet);
 	}	
 	public String getTargetSheet() {
 		return targetSheet;
 	}	
-	public void setTargetProduct(String temp) {
-		targetProduct = temp;
-	}
-	public String getTargetProduct() {
-		return targetProduct;
-	}	
+//	public void setTargetProduct(String temp) {
+//		targetProduct = temp;
+//		System.out.println("Target Product = " + targetProduct);
+//	}
+//	public String getTargetProduct() {
+//		return targetProduct;
+//	}	
 	
 	public TestFixture() {
 		//TODO: Change excel file to account for being in the resource folder instead, or at least have a configurable location
@@ -39,8 +40,8 @@ public class TestFixture {
 	//targetSheet and targetProduct are set by the Fitnesse Spreadsheet
 	//Each simulate call also looks at the sheet
 	//This call is made for every product column
-	public String simulate() {
-
+	public String simulation(String target) {
+		targetProduct = target;
 		appendedImageString = "";
 		rowCount = excelUtilities.getRowCount(targetSheet);
 		completeOptionsList = excelUtilities.getInitialOptionsList(rowCount, targetSheet);
@@ -55,7 +56,7 @@ public class TestFixture {
 		}
 		
 		navigate(product);		
-		String videoString = "<video width='960' height='640' controls='controls'>" + 
+		String videoString = "<video width='600' controls='controls'>" + 
 				"<source src=\"http://localhost/files/"+ product.productNameParsed +".mp4\" type='video/mp4'>" + 
 				"</video>";
 //		String slideShowBeginning = "<div class='slideshow-container'>";

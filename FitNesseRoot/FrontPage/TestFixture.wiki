@@ -87,9 +87,11 @@
 |fitnesse.fixtures|
 *!
 
-!|TestFixture|
-|TargetSheet|TargetProduct                            |simulate?|
-|AutoConfig |Gliding A-Series Frenchwood 1            |         |
+
+|script|Test Fixture|
+|set target sheet|Auto Config|
+|show|simulation|Gliding A-Series Frenchwood 1|
+|show|simulation|Gliding A-Series Frenchwood 1_1|
 
 
 
