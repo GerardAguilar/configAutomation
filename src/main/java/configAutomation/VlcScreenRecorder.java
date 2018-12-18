@@ -14,6 +14,7 @@ import uk.co.caprica.vlcj.player.MediaPlayer;
 import uk.co.caprica.vlcj.player.MediaPlayerFactory;
 import uk.co.caprica.vlcj.runtime.RuntimeUtil;
 
+//http://www.experimentalqa.com/2017/11/record-selenium-test-video-in-mp4.html
 public class VlcScreenRecorder {
 	private final Logger logger =  LoggerFactory.getLogger(VlcScreenRecorder.class);
     private static final String[] OPTIONS = {

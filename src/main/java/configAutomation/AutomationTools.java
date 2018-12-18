@@ -45,12 +45,12 @@ public class AutomationTools {
 	public String fitnesseRootDirectory;
 	public String homePage;
 	String chromeBinaryLocation;
-	int millisecondsToWait = 10000;
+	int millisecondsToWait = 20000;
 //	private ScreenRecorder screenRecorder;
 	VlcScreenRecorder recorder;
 	
 	public AutomationTools() {
-		fitnesseRootDirectory = "C:\\eclipse-workspace\\configAutomation\\FitNesseRoot\\files\\";
+		fitnesseRootDirectory = "C:\\eclipse-workspace\\configAutomation\\FitNesseRoot\\files\\";//TODO Gotta change this to be dynamic
 		chromeBinaryLocation = "C:\\GoogleChromePortable\\GoogleChromePortable.exe";
 		homePage = "https://andersen.inhance.io/app/test.html";
 		
@@ -120,6 +120,10 @@ public class AutomationTools {
 //			driver.manage().window().setSize(d);
 //		}		
 //	}
+	
+	public void closeBrowser() {
+		driver.close();		
+	}
 	
 	public void waitForPresence(final String customAttributeIdPair) {
 		
@@ -323,9 +327,7 @@ public class AutomationTools {
 //	</div>
 	public String image(String sheetName, String configName, int optionCount) {
 		optionCount--;
-//		String imageString = "<div class=\"numbertext\">"+configName +"/" + optionCount + "</div><div class='mySlides'><img src='http://localhost/files/"+sheetName+"_"+configName+".png' style='width:100%'></div><div class=\"text\">Caption Text</div>";
-		String imageString ="<img src='http://localhost/files/"+sheetName+"_"+configName+".png' width='600'>";
-		
+		String imageString ="<img src='http://localhost/files/"+sheetName+"_"+configName+".png' width='600'>";		
 		return imageString;
 	}	
 	

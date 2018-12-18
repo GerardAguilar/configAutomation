@@ -1,5 +1,6 @@
 package configAutomation;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 
@@ -9,7 +10,8 @@ public class TestFixture {
 	ArrayList<ProductOption> completeOptionsList;
 	AutomationTools automationTools;
 	int rowCount;
-	String appendedImageString;
+	String imageString;
+	String videoString;
 	
 	//Fitnesse attributes and methods
 	String targetSheet;
@@ -42,7 +44,8 @@ public class TestFixture {
 	//This call is made for every product column
 	public String simulation(String target) {
 		targetProduct = target;
-		appendedImageString = "";
+		imageString = "";
+		videoString = ""; 
 		rowCount = excelUtilities.getRowCount(targetSheet);
 		completeOptionsList = excelUtilities.getInitialOptionsList(rowCount, targetSheet);
 				
@@ -50,21 +53,29 @@ public class TestFixture {
 		product.extractTaggedOptions(rowCount, completeOptionsList, excelUtilities);
 		
 		try {
-			automationTools.startRecording(product.productNameParsed);
+			automationTools.startRecording(product.sheetName + "_" + product.productNameParsed);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		navigate(product);		
-		String videoString = "<video width='600' controls='controls'>" + 
-				"<source src=\"http://localhost/files/"+ product.productNameParsed +".mp4\" type='video/mp4'>" + 
-				"</video>";
-//		String slideShowBeginning = "<div class='slideshow-container'>";
-//		String slideShowEnding = "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>"+
-//								"<a class='next' onclick='pluSlides(1)'>&#10095;</a>"+
-//								"</div>";
-//		String returnMe = videoString+ slideShowBeginning + appendedImageString + slideShowEnding;			
-		String returnMe = "<div>" + videoString+appendedImageString + "</div>";
+		String returnMe = 
+				"<table>"
+				+ "<tbody>"
+				+ 	"<tr>"
+				+ 		"<td>"
+				+ 			"<div>" 
+				+ 				videoString
+				+ 			"</div>"
+				+ 		"</td>"
+				+ 		"<td>"
+				+ 			"<div>"
+				+	 			imageString 
+				+ 			"</div>"
+				+ 		"</td>"
+				+ 	"</tr>"
+				+ "</tbody>"
+				+ "</table>";
 		try {
 			automationTools.stopRecording();
 		} catch (Exception e) {
@@ -86,6 +97,8 @@ public class TestFixture {
 		String attributeIdPair;
 		String selection;
 		System.out.println("Start navigation for " + product.productName + " ["+optionCount+"]");
+		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+		Long timestampId = timestamp.getTime();
 		for(int i=0; i<optionCount; i++) {
 			ProductOption tempOption = product.getOption(i);
 			action = tempOption.action;
@@ -99,18 +112,32 @@ public class TestFixture {
 			if(action.equals("select")) {
 				System.out.println("select");
 				automationTools.select(attributeIdPair, selection);
-				appendedImageString = automationTools.screenshot(product.productName,i+"",optionCount);
+				imageString = automationTools.screenshot(product.productName,i+"",optionCount);
 			}else if(action.equals("click")) {
 				System.out.println("click");
 				automationTools.click(attributeIdPair, selection);
-				appendedImageString = automationTools.screenshot(product.productName,i+"",optionCount);
+				imageString = automationTools.screenshot(product.productName,i+"",optionCount);
 			}else if(action.equals("mouse")) {
 				System.out.println("mouse");
 				automationTools.mouse(attributeIdPair, selection);
-				appendedImageString = automationTools.screenshot(product.productName,i+"",optionCount);
+				imageString = automationTools.screenshot(product.productName,i+"",optionCount);
 			}else {
 				System.out.println(action + " could not be found in the available actions");
 			}
 		}
+		
+		videoString = "<video id='"+timestampId+"'"
+				+ "width='600' controls='controls'>" 
+				+ "<source src=\"http://localhost/files/"
+				+ product.sheetName + "_" + product.productNameParsed
+				+ ".mp4\" type='video/mp4'></video>"
+				+ "<script>"
+				+ "var vid = document.getElementById('"+timestampId+"');"
+				+ "vid.playbackRate = 4.0;"
+				+ "</script>";	
+	}
+	
+	public void closeBrowser() {
+		automationTools.closeBrowser();
 	}
 }
