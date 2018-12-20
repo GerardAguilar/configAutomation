@@ -21,6 +21,7 @@ import org.apache.commons.io.FileUtils;
 //import org.monte.media.math.Rational;
 //import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 //import org.openqa.selenium.Dimension;
 //import org.openqa.selenium.ElementNotVisibleException;
 //import org.openqa.selenium.JavascriptExecutor;
@@ -48,25 +49,32 @@ public class AutomationTools {
 	int millisecondsToWait = 20000;
 	VlcScreenRecorder recorder;
 	
-	public AutomationTools(String targetChrome) {
-		fitnesseRootDirectory = "C:\\eclipse-workspace\\configAutomation\\FitNesseRoot\\files\\";//TODO Gotta change this to be dynamic
+	public AutomationTools(String targetChrome, String targetHome) {
+		String tempFitnesseDirectory = new File(".").getAbsolutePath();
+		tempFitnesseDirectory = tempFitnesseDirectory.substring(0,tempFitnesseDirectory.length()-2);	
+		tempFitnesseDirectory = tempFitnesseDirectory + "\\FitNesseRoot\\files\\";
+		
+		System.out.println("tempFitnessDirectory: " + tempFitnesseDirectory);
+		
+//		fitnesseRootDirectory = "C:\\eclipse-workspace\\configAutomation\\FitNesseRoot\\files\\";//TODO Gotta change this to be dynamic
+		fitnesseRootDirectory = tempFitnesseDirectory;
 //		chromeBinaryLocation = "C:\\GoogleChromePortable\\GoogleChromePortable.exe";//TODO Gotta change this to be dynamic
 //		chromeBinaryLocation = "C:\\GoogleChromePortable\\App\\Chrome-bin\\chrome.exe";//outdated
-		chromeBinaryLocation = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
-		homePage = "https://andersen.inhance.io/app/test.html";
+		chromeBinaryLocation = targetChrome;
+		homePage = targetHome;
 		
 		try {
 			setupChrome(targetChrome);
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("setupChrome failed: chromeBinaryLocation - "+chromeBinaryLocation+" could not be linked to "+"");
+			System.out.println("setupChrome failed");
 			driver = new ChromeDriver();
 			driver.manage().window().fullscreen();
 			driver.get(homePage);
 		}		
 		
 		recorder = new VlcScreenRecorder();
-		recorder.setVideoSubdirectory("\\FitNesseRoot\\files\\");
+		recorder.setVideoSubdirectory("\\FitNesseRoot\\files\\");//TODO Gotta change this to be dynamic too
 	}
 //	//pairs chrome driver with chrome binary
 //	private void setupChrome() throws Exception{
@@ -173,12 +181,15 @@ public class AutomationTools {
 
 		System.setProperty("webdriver.chrome.driver", chromeDriverLocation);              
 		driver = new ChromeDriver(options);
-		driver.manage().window().fullscreen();
+	    driver.get("about:blank");
+		Dimension d = new Dimension(1920,1080);
+		driver.manage().window().setSize(d);
 		driver.get(homePage);
 	}
 	
 	public void closeBrowser() {
 		driver.close();		
+//		driver.quit();
 	}
 	
 	public void waitForPresence(final String customAttributeIdPair) {

@@ -19,39 +19,36 @@ public class TestFixture {
 	String targetProduct;	
 	String targetExcelFilename;
 	String targetChrome;
+	String targetHome;
 	
-	public void initializeTargetExcelSheet(String temp) {
+	public void setTargetExcel(String temp) {
 		targetExcelFilename = temp;
-		System.out.println("Target Excel Sheet = " + targetExcelFilename);
+		excelUtilities = new ExcelUtilities(targetExcelFilename);
+		System.out.println("Target Sheet = " + targetExcelFilename);
 	}	
-	public void initializeTargetChrome(String temp) {
+	public void setTargetChrome(String temp) {
 		targetChrome = temp;
 		System.out.println("Target Chrome = " + targetChrome);
 	}	
-	
+	public void setTargetHome(String temp) {
+		targetHome = temp;
+		System.out.println("Target Home = " + targetHome);
+	}	
+	public void setAutomationTools() {
+		automationTools = new AutomationTools(targetChrome, targetHome);
+	}	
 	public void setTargetSheet(String temp) {
 		targetSheet = temp;
 		System.out.println("Target Sheet = " + targetSheet);
-	}	
+	}
 	
 	public TestFixture() {
 		//TODO: Change excel file to account for being in the resource folder instead, or at least have a configurable location
-	    File directory = new File("./");
+	    File directory = new File("./test");
 	    System.out.println("Directory: " + directory.getAbsolutePath());
 //		filename = "C:\\Users\\gaguilar\\Desktop\\Andersen.xlsx";	
-//	    excelUtilities = new ExcelUtilities(filename);		
+//	    excelUtilities = new ExcelUtilities(filename);			    
 	}		
-	
-	public boolean initialize() {
-		try {
-			excelUtilities = new ExcelUtilities(targetExcelFilename);
-			automationTools = new AutomationTools(targetChrome);
-			return true;
-		}catch(Exception e) {
-			System.out.println("initialize() error: "+e);
-			return false;
-		}		
-	}
 	
 	//Each simulate call creates one and only one product
 	//targetSheet and targetProduct are set by the Fitnesse Spreadsheet

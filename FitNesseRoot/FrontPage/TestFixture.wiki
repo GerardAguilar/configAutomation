@@ -1,4 +1,5 @@
 !path C:\eclipse-workspace\configAutomation\target\classes
+#!path C:\Users\gaguilar\Downloads\configAutomation
 
 !***> paths
 
@@ -87,12 +88,10 @@
 |fitnesse.fixtures|
 *!
 
-
-|script|Test Fixture|
+!|script|Test Fixture|
+|set target excel|C:\Users\gaguilar\Desktop\Andersen.xlsx|
+|set target chrome|C:\Program Files (x86)\Google\Chrome\Application\chrome.exe|
+|set target home|https://andersen.inhance.io/app/test.html|
+|set automation tools|
 |set target sheet|Auto Config|
 |close browser|
-
-
-
-
-
