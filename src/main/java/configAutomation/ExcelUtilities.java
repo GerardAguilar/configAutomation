@@ -1,6 +1,6 @@
 package configAutomation;
 
-import java.awt.List;
+//import java.awt.List;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -61,11 +61,9 @@ public class ExcelUtilities {
 	public ArrayList<ProductOption> getInitialOptionsList(int rowCount, String targetSheet) {
 		ArrayList<ProductOption> optionList = new ArrayList<ProductOption>();
 		XSSFSheet excelWSheet = excelWBook.getSheet(targetSheet);
-		int tempCount =0;
 		for(int i=1; i<rowCount; i++) {
 			String cellDataMenu="";
 			String cellDataOption="";
-			tempCount++;
 			try {				
 				cellDataMenu = this.getCellData(i, 0, excelWSheet);
 				cellDataOption = this.getCellData(i, 1, excelWSheet);

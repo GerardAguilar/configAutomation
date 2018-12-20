@@ -1,10 +1,10 @@
 package configAutomation;
 
 import java.awt.AWTException;
-import java.awt.GraphicsConfiguration;
-import java.awt.GraphicsEnvironment;
-import java.awt.MouseInfo;
-import java.awt.Point;
+//import java.awt.GraphicsConfiguration;
+//import java.awt.GraphicsEnvironment;
+//import java.awt.MouseInfo;
+//import java.awt.Point;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.io.File;
@@ -13,17 +13,17 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+//import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.monte.media.Format;
-import org.monte.media.FormatKeys.MediaType;
-import org.monte.media.math.Rational;
-import org.monte.screenrecorder.ScreenRecorder;
+//import org.monte.media.Format;
+//import org.monte.media.FormatKeys.MediaType;
+//import org.monte.media.math.Rational;
+//import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.JavascriptExecutor;
+//import org.openqa.selenium.Dimension;
+//import org.openqa.selenium.ElementNotVisibleException;
+//import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -35,8 +35,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
-import static org.monte.media.AudioFormatKeys.*;
-import static org.monte.media.VideoFormatKeys.*;
+//import static org.monte.media.AudioFormatKeys.*;
+//import static org.monte.media.VideoFormatKeys.*;
 
 import com.google.common.base.Function;
 
@@ -46,80 +46,136 @@ public class AutomationTools {
 	public String homePage;
 	String chromeBinaryLocation;
 	int millisecondsToWait = 20000;
-//	private ScreenRecorder screenRecorder;
 	VlcScreenRecorder recorder;
 	
-	public AutomationTools() {
+	public AutomationTools(String targetChrome) {
 		fitnesseRootDirectory = "C:\\eclipse-workspace\\configAutomation\\FitNesseRoot\\files\\";//TODO Gotta change this to be dynamic
-		chromeBinaryLocation = "C:\\GoogleChromePortable\\GoogleChromePortable.exe";
+//		chromeBinaryLocation = "C:\\GoogleChromePortable\\GoogleChromePortable.exe";//TODO Gotta change this to be dynamic
+//		chromeBinaryLocation = "C:\\GoogleChromePortable\\App\\Chrome-bin\\chrome.exe";//outdated
+		chromeBinaryLocation = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
 		homePage = "https://andersen.inhance.io/app/test.html";
 		
-		File fitnesseRootDirectoryFile = new File(fitnesseRootDirectory);
-//		try {
-//			setupChrome();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-		driver = new ChromeDriver();
-		driver.manage().window().fullscreen();
-		driver.get(homePage);
+		try {
+			setupChrome(targetChrome);
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("setupChrome failed: chromeBinaryLocation - "+chromeBinaryLocation+" could not be linked to "+"");
+			driver = new ChromeDriver();
+			driver.manage().window().fullscreen();
+			driver.get(homePage);
+		}		
 		
 		recorder = new VlcScreenRecorder();
 		recorder.setVideoSubdirectory("\\FitNesseRoot\\files\\");
-		
-//		GraphicsConfiguration gc = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
-//        try {
-//			screenRecorder = new ScreenRecorder(gc,
-//			null,
-//			new Format(	MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
-//			new Format(	MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-//						CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-//						DepthKey, (int)24, FrameRateKey, Rational.valueOf(15),
-//						QualityKey, 1.0f,
-//						KeyFrameIntervalKey, (int) (15 * 60)),
-//			new Format(	MediaTypeKey, MediaType.VIDEO, EncodingKey,"black",
-//						FrameRateKey, Rational.valueOf(30)),
-//			null,
-//			fitnesseRootDirectoryFile);//this is where the movie is written into
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		} catch (AWTException e) {
-//			e.printStackTrace();
-//		}
-
 	}
 //	//pairs chrome driver with chrome binary
 //	private void setupChrome() throws Exception{
-//		if(chromeBinaryLocation.length()>0) {
-//			/***
-//			 * From our resources folder, copy chromedriver.exe into a Driver folder
-//			 * Modify that chrome driver to attach to the chrome binary as designated in the Fitnesse table
-//			 */
-//			ClassLoader classLoader = getClass().getClassLoader();
-//	        URL resource = classLoader.getResource("chromedriver.exe");
+////		if(chromeBinaryLocation.length()>0) {
+//
+////			ClassLoader classLoader = getClass().getClassLoader();
+////			URL chromeDriverResource;
+////			chromeDriverResource = classLoader.getResource("chromedriver.exe");
+////			if(chromeDriverResource==null) {
+////				chromeDriverResource = classLoader.getResource("\\chromedriver.exe");
+////				if(chromeDriverResource==null) {
+////					chromeDriverResource = classLoader.getResource("/chromedriver.exe");
+////					if(chromeDriverResource==null) {
+////						chromeDriverResource = AutomationTools.class.getClassLoader().getResource("chromedriver.exe");
+////						if(chromeDriverResource==null) {
+////							chromeDriverResource = AutomationTools.class.getClassLoader().getResource("\\\\chromedriver.exe");
+////							if(chromeDriverResource==null) {
+////								chromeDriverResource = AutomationTools.class.getClassLoader().getResource("/chromedriver.exe");
+////								if(chromeDriverResource==null) {
+////									System.out.println("Well.....stick with copying the file onto the root folder then");
+////								}
+////							}
+////						}
+////					}
+////				}	
+////			}
+////			
+////			System.out.println("chromeDriverResource: " + chromeDriverResource.toString());
+//			
+////	        URL chromeDriverResource1 = classLoader.getResource("/chromedriver.exe");
+////	        URL chromeDriverResource2 = AutomationTools.class.getClassLoader().getResource("chromedriver.exe");
+////	        URL googleChromePortableResource = classLoader.getResource("/GoogleChromePortable/GoogleChromePortable.exe");
+////	        URL googleChromePortableResource1 = classLoader.getResource("GoogleChromePortable/GoogleChromePortable.exe");
+////	        URL googleChromePortableResource2 = AutomationTools.class.getClassLoader().getResource("GoogleChromePortable/GoogleChromePortable.exe");
 ////	        URL chromePortable = classLoader.getResource(".\\GoogleChromePortable\\GoogleChromePortable.exe");
 ////			File chromedriver = new File("Driver"+"\\chromedriver.exe");//this seems to have issues being created when triggered from a jar file, likely due to the location
-//			File chromedriver = new File("chromedriver.exe");
-//			System.out.println("Location of chromedriver.exe is " + chromedriver.getAbsolutePath());
-//            if (!chromedriver.exists()) {
-//            	chromedriver.createNewFile();
-//                FileUtils.copyURLToFile(resource, chromedriver);
-//            }else {
-//            	System.out.println("chromedriver.exe already exists");
-//            }
-//			String chromeDriverLocation = chromedriver.getAbsolutePath();
-//	        System.out.println("chromeDriver's absolute path: " + chromeDriverLocation);
-//			ChromeOptions options = new ChromeOptions();
-//			options.setBinary(chromeBinaryLocation);
-//			options.addArguments("disable-infobars");
+//
+////		/***
+////		 * From our resources folder, copy chromedriver.exe into a Driver folder
+////		 * Modify that chrome driver to attach to the chrome binary as designated in the Fitnesse table
+////		 */
+//		File chromedriver = new File("chromedriver.exe");
+//		System.out.println("Location of chromedriver.exe is " + chromedriver.getAbsolutePath());
+////            
+////		why do I have to copy it if it's already in my resources? Because I can't get getResource to work
+//		if (!chromedriver.exists()) {
+//           	chromedriver.createNewFile();
+//            FileUtils.copyURLToFile(chromeDriverResource, chromedriver);
+//        }else {
+//          	System.out.println("chromedriver.exe already exists");
+//        }
+//		String chromeDriverLocation = chromedriver.getAbsolutePath();
+//
+//	        
+//		String chromeDriverLocation = chromeDriverResource.getPath();		
+//        System.out.println("chromeDriverResource.getPath() "+ chromeDriverLocation);
+//		String googleChromePortableLocation = googleChromePortableResource.getPath();
+//        System.out.println("googleChromePortableResource: " + googleChromePortableLocation);
+////	        System.out.println("chromeDriver's absolute path: " + chromeDriverLocation);
+//
+//		ChromeOptions options = new ChromeOptions();
+////			options.setBinary(googleChromePortableLocation);
+//		options.addArguments("disable-infobars");
 ////			options.addArguments("--allow-file-access-from-files");			
-//			System.setProperty("webdriver.chrome.driver", chromeDriverLocation);              
-//			driver = new ChromeDriver(options);
-//		    driver.get("about:blank");
-//			Dimension d = new Dimension(420,660);
-//			driver.manage().window().setSize(d);
-//		}		
+//		System.setProperty("webdriver.chrome.driver", chromeDriverLocation);             
+////			System.setProperty("webdriver.chrome.driver", chromeDriverLocation);
+//		driver = new ChromeDriver(options);
+//	    driver.get("about:blank");
+//		Dimension d = new Dimension(420,660);
+//		driver.manage().window().setSize(d);
+//		driver.get(homePage);
+////		}		
 //	}
+	
+	public void setupChrome(String targetChrome) throws Exception{
+		/***
+		 * From our resources folder, copy chromedriver.exe into a Driver folder
+		 * Modify that chrome driver to attach to the chrome binary as designated in the Fitnesse table
+		 */
+		ClassLoader classLoader = getClass().getClassLoader();
+        URL resource = classLoader.getResource("chromedriver.exe");//the copying works, so this URL should be valid
+//		File chromedriver = new File("Driver"+"\\chromedriver.exe");//this seems to have issues being created when triggered from a jar file, likely due to the location
+		File chromedriver = new File("chromedriver.exe");
+//		File chromeBinary = new File(chromeBinaryLocation);
+		File chromeBinary = new File(targetChrome);
+		System.out.println("Location of chromedriver.exe is " + chromedriver.getAbsolutePath());
+		System.out.println("resource: "+resource.toString());
+		System.out.println("chrome binary location: " + chromeBinary.getAbsolutePath());
+        if (!chromedriver.exists()) {
+        	chromedriver.createNewFile();
+            FileUtils.copyURLToFile(resource, chromedriver);
+        }else {
+        	System.out.println("chromedriver.exe already exists");
+        }
+		String chromeDriverLocation = chromedriver.getAbsolutePath();
+        
+		ChromeOptions options = new ChromeOptions();
+		//this might be the issue with the chrome setup failing
+//		options.addArguments("--headless");
+		options.setBinary(chromeBinary.getAbsolutePath());
+//		options.addArguments("disable-infobars");
+//		options.addArguments("--allow-file-access-from-files");
+//		options.addArguments("--disable-dev-shm-usage"); 
+
+		System.setProperty("webdriver.chrome.driver", chromeDriverLocation);              
+		driver = new ChromeDriver(options);
+		driver.manage().window().fullscreen();
+		driver.get(homePage);
+	}
 	
 	public void closeBrowser() {
 		driver.close();		
@@ -300,7 +356,6 @@ public class AutomationTools {
 	}
 	
 	public void mouseDrag(int xOffset, int yOffset) {
-		//TODO: the below target needs to be generic
 		WebElement target = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/canvas[1]"));
 		Actions builder = (new Actions(driver)).dragAndDropBy(target, xOffset, yOffset);
 		builder.perform();
@@ -320,27 +375,11 @@ public class AutomationTools {
 		return image(sheetName, configName, optionCount);
 	}
 	
-//  <div class="mySlides fade">
-//		<div class="numbertext">2 / 3</div>
-//		<img src="img2.jpg" style="width:100%">
-//		<div class="text">Caption Two</div>
-//	</div>
 	public String image(String sheetName, String configName, int optionCount) {
 		optionCount--;
 		String imageString ="<img src='http://localhost/files/"+sheetName+"_"+configName+".png' width='600'>";		
 		return imageString;
 	}	
-	
-//	//from https://stackoverflow.com/questions/29415669/screen-recording-of-a-test-execution-in-selenium-using-java
-//	public void startRecording() throws Exception
-//	{
-//		this.screenRecorder.start();
-//	}
-//	public void stopRecording() throws Exception
-//	{
-//		this.screenRecorder.stop();
-//		System.out.println(this.screenRecorder.getCreatedMovieFiles().toString());
-//	}
 	
 	//http://www.experimentalqa.com/2017/11/record-selenium-test-video-in-mp4.html
 	public void startRecording(String testName) {

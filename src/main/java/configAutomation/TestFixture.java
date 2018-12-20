@@ -1,5 +1,6 @@
 package configAutomation;
 
+import java.io.File;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 
@@ -16,27 +17,41 @@ public class TestFixture {
 	//Fitnesse attributes and methods
 	String targetSheet;
 	String targetProduct;	
+	String targetExcelFilename;
+	String targetChrome;
+	
+	public void initializeTargetExcelSheet(String temp) {
+		targetExcelFilename = temp;
+		System.out.println("Target Excel Sheet = " + targetExcelFilename);
+	}	
+	public void initializeTargetChrome(String temp) {
+		targetChrome = temp;
+		System.out.println("Target Chrome = " + targetChrome);
+	}	
+	
 	public void setTargetSheet(String temp) {
 		targetSheet = temp;
 		System.out.println("Target Sheet = " + targetSheet);
 	}	
-	public String getTargetSheet() {
-		return targetSheet;
-	}	
-//	public void setTargetProduct(String temp) {
-//		targetProduct = temp;
-//		System.out.println("Target Product = " + targetProduct);
-//	}
-//	public String getTargetProduct() {
-//		return targetProduct;
-//	}	
 	
 	public TestFixture() {
 		//TODO: Change excel file to account for being in the resource folder instead, or at least have a configurable location
-		filename = "C:\\Users\\gaguilar\\Desktop\\Andersen.xlsx";
-		excelUtilities = new ExcelUtilities(filename);		
-		automationTools = new AutomationTools();
+	    File directory = new File("./");
+	    System.out.println("Directory: " + directory.getAbsolutePath());
+//		filename = "C:\\Users\\gaguilar\\Desktop\\Andersen.xlsx";	
+//	    excelUtilities = new ExcelUtilities(filename);		
 	}		
+	
+	public boolean initialize() {
+		try {
+			excelUtilities = new ExcelUtilities(targetExcelFilename);
+			automationTools = new AutomationTools(targetChrome);
+			return true;
+		}catch(Exception e) {
+			System.out.println("initialize() error: "+e);
+			return false;
+		}		
+	}
 	
 	//Each simulate call creates one and only one product
 	//targetSheet and targetProduct are set by the Fitnesse Spreadsheet

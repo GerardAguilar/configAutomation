@@ -90,10 +90,6 @@
 
 |script|Test Fixture|
 |set target sheet|Auto Config|
-|show|simulation|Gliding A-Series Frenchwood 1|
-|show|simulation|Gliding A-Series Frenchwood 1_1|
-|set target sheet|Auto Config 2|
-|show|simulation|Gliding A-Series Frenchwood 1|
 |close browser|
 
 
