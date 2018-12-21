@@ -74,7 +74,7 @@
 !path C:\Users\gaguilar\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
 !path C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-api\2.9.1\log4j-api-2.9.1.jar
 !path C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-core\2.9.1\log4j-core-2.9.1.jar
-
+!path C:\Users\gaguilar\.m2\repository\uk\co\caprica\vlcj\3.10.1\vlcj-3.10.1.jar
 *!
 !***> imports
 
@@ -93,5 +93,6 @@
 |set target chrome|C:\Program Files (x86)\Google\Chrome\Application\chrome.exe|
 |set target home|https://andersen.inhance.io/app/test.html|
 |set automation tools|
-|set target sheet|Auto Config|
+|set target sheet|Auto Config 2|
+|show|simulation|Gliding A-Series Frenchwood 1|
 |close browser|

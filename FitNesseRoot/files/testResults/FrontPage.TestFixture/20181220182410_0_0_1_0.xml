@@ -9,12 +9,12 @@
       <ignores>0</ignores>
       <exceptions>0</exceptions>
     </counts>
-    <date>2018-12-19T17:59:02-08:00</date>
-    <runTimeInMillis>59533</runTimeInMillis>
+    <date>2018-12-20T18:24:11-08:00</date>
+    <runTimeInMillis>188758</runTimeInMillis>
     <content>&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\eclipse-workspace\configAutomation\target\classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 	&lt;p class="title"&gt;paths&lt;/p&gt;
 	&lt;div&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
-&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\baseline&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\resources.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\rt.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\jsse.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\jce.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\charsets.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\jfr.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\access-bridge-64.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\cldrdata.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\dnsns.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\jaccess.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\jfxrt.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\localedata.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\nashorn.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunec.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunjce_provider.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunmscapi.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunpkcs11.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\zipfs.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-java\3.14.0\selenium-java-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-api\3.14.0\selenium-api-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.14.0\selenium-edge-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.14.0\selenium-firefox-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.14.0\selenium-ie-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.14.0\selenium-opera-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.14.0\selenium-remote-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.14.0\selenium-safari-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-support\3.14.0\selenium-support-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.14.0\selenium-chrome-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\net\bytebuddy\byte-buddy\1.8.3\byte-buddy-1.8.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\htmlparser\htmlparser\2.1\htmlparser-2.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\htmlparser\htmllexer\2.1\htmllexer-2.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\json\json\20151123\json-20151123.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\googlecode\java-diff-utils\diffutils\1.3.0\diffutils-1.3.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\ant\ant\1.9.6\ant-1.9.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\ant\ant-launcher\1.9.6\ant-launcher-1.9.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\junit\junit\4.12\junit-4.12.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\poi\poi\3.11\poi-3.11.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml\3.11\poi-ooxml-3.11.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.11\poi-ooxml-schemas-3.11.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\github\stephenc\monte\monte-screen-recorder\0.7.7.0\monte-screen-recorder-0.7.7.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\uk\co\caprica\vlcj\3.10.1\vlcj-3.10.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\net\java\dev\jna\jna-platform\4.1.0\jna-platform-4.1.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\net\java\dev\jna\jna\4.2.0\jna-4.2.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-api\2.9.1\log4j-api-2.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-core\2.9.1\log4j-core-2.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\baseline&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\resources.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\rt.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\jsse.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\jce.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\charsets.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\jfr.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\access-bridge-64.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\cldrdata.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\dnsns.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\jaccess.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\jfxrt.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\localedata.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\nashorn.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunec.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunjce_provider.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunmscapi.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunpkcs11.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\zipfs.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-java\3.14.0\selenium-java-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-api\3.14.0\selenium-api-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.14.0\selenium-edge-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.14.0\selenium-firefox-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.14.0\selenium-ie-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.14.0\selenium-opera-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.14.0\selenium-remote-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.14.0\selenium-safari-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-support\3.14.0\selenium-support-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.14.0\selenium-chrome-driver-3.14.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\net\bytebuddy\byte-buddy\1.8.3\byte-buddy-1.8.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\htmlparser\htmlparser\2.1\htmlparser-2.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\htmlparser\htmllexer\2.1\htmllexer-2.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\json\json\20151123\json-20151123.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\googlecode\java-diff-utils\diffutils\1.3.0\diffutils-1.3.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\ant\ant\1.9.6\ant-1.9.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\ant\ant-launcher\1.9.6\ant-launcher-1.9.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\junit\junit\4.12\junit-4.12.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\poi\poi\3.11\poi-3.11.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml\3.11\poi-ooxml-3.11.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.11\poi-ooxml-schemas-3.11.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\com\github\stephenc\monte\monte-screen-recorder\0.7.7.0\monte-screen-recorder-0.7.7.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\uk\co\caprica\vlcj\3.10.1\vlcj-3.10.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\net\java\dev\jna\jna-platform\4.1.0\jna-platform-4.1.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\net\java\dev\jna\jna\4.2.0\jna-4.2.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-api\2.9.1\log4j-api-2.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-core\2.9.1\log4j-core-2.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\gaguilar\.m2\repository\uk\co\caprica\vlcj\3.10.1\vlcj-3.10.1.jar&lt;/span&gt;&lt;br/&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 	&lt;p class="title"&gt;imports&lt;/p&gt;
@@ -66,13 +66,13 @@
 	&lt;/tr&gt;
 	&lt;tr class="slimRowColor0"&gt;
 		&lt;td&gt;set target sheet&lt;/td&gt;
-		&lt;td colspan="2"&gt;Auto Config&lt;/td&gt;
+		&lt;td colspan="2"&gt;Auto Config 2&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr class="slimRowColor9"&gt;
 		&lt;td&gt;show&lt;/td&gt;
 		&lt;td&gt;simulation&lt;/td&gt;
 		&lt;td&gt;Gliding A-Series Frenchwood 1&lt;/td&gt;
-	&lt;td&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;div&gt;&lt;video id='1545271159036'width='600' controls='controls'&gt;&lt;source src="http://localhost/files/Auto Config_Gliding A-Series Frenchwood 1.mp4" type='video/mp4'&gt;&lt;/video&gt;&lt;script&gt;var vid = document.getElementById('1545271159036');vid.playbackRate = 4.0;&lt;/script&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;img src='http://localhost/files/Gliding A-Series Frenchwood 1_3.png' width='600'&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;td&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;div&gt;&lt;video id='1545359068856'width='600' controls='controls'&gt;&lt;source src="http://localhost/files/Auto Config 2_Gliding A-Series Frenchwood 1.mp4" type='video/mp4'&gt;&lt;/video&gt;&lt;script&gt;var vid = document.getElementById('1545359068856');vid.playbackRate = 4.0;&lt;/script&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;img src='http://localhost/files/Gliding A-Series Frenchwood 1_49.png' width='600'&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
 	&lt;tr class="slimRowColor8"&gt;
 		&lt;td colspan="3"&gt;close browser&lt;/td&gt;
 	&lt;/tr&gt;
@@ -169,7 +169,7 @@
                                       </expectation>
               </instructionResult>
             <instructionResult>
-        <instruction>{id='scriptTable_3_5', instruction='call', instanceName='scriptTableActor', methodName='setTargetSheet', args=[Auto Config]}</instruction>
+        <instruction>{id='scriptTable_3_5', instruction='call', instanceName='scriptTableActor', methodName='setTargetSheet', args=[Auto Config 2]}</instruction>
         <slimResult></slimResult>
                 <expectation>
                     <instructionId>scriptTable_3_5</instructionId>
@@ -202,32 +202,32 @@
       </result>
   <executionLog>
     <testSystem>slim:fitnesse.slim.SlimService</testSystem>
-    <command>"C:\Program Files\Java\jdk1.8.0_161\bin\java" -cp "C:\eclipse-workspace\configAutomation\lib\fitnesse-standalone.jar;C:\eclipse-workspace\configAutomation\target\classes;C:\baseline;C:\Program Files\Java\jre1.8.0_161\lib\resources.jar;C:\Program Files\Java\jre1.8.0_161\lib\rt.jar;C:\Program Files\Java\jre1.8.0_161\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_161\lib\jce.jar;C:\Program Files\Java\jre1.8.0_161\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_161\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\cldrdata.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\dnsns.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\jaccess.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\jfxrt.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\localedata.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\nashorn.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunec.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunmscapi.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\zipfs.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-java\3.14.0\selenium-java-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-api\3.14.0\selenium-api-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.14.0\selenium-edge-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.14.0\selenium-firefox-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.14.0\selenium-ie-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.14.0\selenium-opera-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.14.0\selenium-remote-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.14.0\selenium-safari-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-support\3.14.0\selenium-support-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.14.0\selenium-chrome-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\net\bytebuddy\byte-buddy\1.8.3\byte-buddy-1.8.3.jar;C:\Users\gaguilar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\gaguilar\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\gaguilar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar;C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar;C:\Users\gaguilar\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar;C:\Users\gaguilar\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar;C:\Users\gaguilar\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\gaguilar\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar;C:\Users\gaguilar\.m2\repository\org\htmlparser\htmlparser\2.1\htmlparser-2.1.jar;C:\Users\gaguilar\.m2\repository\org\htmlparser\htmllexer\2.1\htmllexer-2.1.jar;C:\Users\gaguilar\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar;C:\Users\gaguilar\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\gaguilar\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\gaguilar\.m2\repository\org\json\json\20151123\json-20151123.jar;C:\Users\gaguilar\.m2\repository\com\googlecode\java-diff-utils\diffutils\1.3.0\diffutils-1.3.0.jar;C:\Users\gaguilar\.m2\repository\org\apache\ant\ant\1.9.6\ant-1.9.6.jar;C:\Users\gaguilar\.m2\repository\org\apache\ant\ant-launcher\1.9.6\ant-launcher-1.9.6.jar;C:\Users\gaguilar\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\gaguilar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\gaguilar\.m2\repository\org\apache\poi\poi\3.11\poi-3.11.jar;C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml\3.11\poi-ooxml-3.11.jar;C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.11\poi-ooxml-schemas-3.11.jar;C:\Users\gaguilar\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\gaguilar\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\gaguilar\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\gaguilar\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\gaguilar\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\gaguilar\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\gaguilar\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\gaguilar\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\gaguilar\.m2\repository\com\github\stephenc\monte\monte-screen-recorder\0.7.7.0\monte-screen-recorder-0.7.7.0.jar;C:\Users\gaguilar\.m2\repository\uk\co\caprica\vlcj\3.10.1\vlcj-3.10.1.jar;C:\Users\gaguilar\.m2\repository\net\java\dev\jna\jna-platform\4.1.0\jna-platform-4.1.0.jar;C:\Users\gaguilar\.m2\repository\net\java\dev\jna\jna\4.2.0\jna-4.2.0.jar;C:\Users\gaguilar\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\gaguilar\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar;C:\Users\gaguilar\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-api\2.9.1\log4j-api-2.9.1.jar;C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-core\2.9.1\log4j-core-2.9.1.jar" fitnesse.slim.SlimService 1</command>
+    <command>"C:\Program Files\Java\jdk1.8.0_161\bin\java" -cp "C:\Users\gaguilar\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar;C:\eclipse-workspace\configAutomation\target\classes;C:\baseline;C:\Program Files\Java\jre1.8.0_161\lib\resources.jar;C:\Program Files\Java\jre1.8.0_161\lib\rt.jar;C:\Program Files\Java\jre1.8.0_161\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_161\lib\jce.jar;C:\Program Files\Java\jre1.8.0_161\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_161\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\cldrdata.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\dnsns.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\jaccess.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\jfxrt.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\localedata.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\nashorn.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunec.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunmscapi.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\zipfs.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-java\3.14.0\selenium-java-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-api\3.14.0\selenium-api-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.14.0\selenium-edge-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.14.0\selenium-firefox-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.14.0\selenium-ie-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.14.0\selenium-opera-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.14.0\selenium-remote-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.14.0\selenium-safari-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-support\3.14.0\selenium-support-3.14.0.jar;C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.14.0\selenium-chrome-driver-3.14.0.jar;C:\Users\gaguilar\.m2\repository\net\bytebuddy\byte-buddy\1.8.3\byte-buddy-1.8.3.jar;C:\Users\gaguilar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\gaguilar\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\gaguilar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar;C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar;C:\Users\gaguilar\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar;C:\Users\gaguilar\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar;C:\Users\gaguilar\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\gaguilar\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar;C:\Users\gaguilar\.m2\repository\org\htmlparser\htmlparser\2.1\htmlparser-2.1.jar;C:\Users\gaguilar\.m2\repository\org\htmlparser\htmllexer\2.1\htmllexer-2.1.jar;C:\Users\gaguilar\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar;C:\Users\gaguilar\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\gaguilar\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\gaguilar\.m2\repository\org\json\json\20151123\json-20151123.jar;C:\Users\gaguilar\.m2\repository\com\googlecode\java-diff-utils\diffutils\1.3.0\diffutils-1.3.0.jar;C:\Users\gaguilar\.m2\repository\org\apache\ant\ant\1.9.6\ant-1.9.6.jar;C:\Users\gaguilar\.m2\repository\org\apache\ant\ant-launcher\1.9.6\ant-launcher-1.9.6.jar;C:\Users\gaguilar\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\gaguilar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\gaguilar\.m2\repository\org\apache\poi\poi\3.11\poi-3.11.jar;C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml\3.11\poi-ooxml-3.11.jar;C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.11\poi-ooxml-schemas-3.11.jar;C:\Users\gaguilar\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\gaguilar\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\gaguilar\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\gaguilar\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\gaguilar\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\gaguilar\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\gaguilar\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\gaguilar\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\gaguilar\.m2\repository\com\github\stephenc\monte\monte-screen-recorder\0.7.7.0\monte-screen-recorder-0.7.7.0.jar;C:\Users\gaguilar\.m2\repository\uk\co\caprica\vlcj\3.10.1\vlcj-3.10.1.jar;C:\Users\gaguilar\.m2\repository\net\java\dev\jna\jna-platform\4.1.0\jna-platform-4.1.0.jar;C:\Users\gaguilar\.m2\repository\net\java\dev\jna\jna\4.2.0\jna-4.2.0.jar;C:\Users\gaguilar\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\gaguilar\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar;C:\Users\gaguilar\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-api\2.9.1\log4j-api-2.9.1.jar;C:\Users\gaguilar\.m2\repository\org\apache\logging\log4j\log4j-core\2.9.1\log4j-core-2.9.1.jar" fitnesse.slim.SlimService 1</command>
     <exitCode>0</exitCode>
     <stdOut>Directory: C:\eclipse-workspace\configAutomation\.\test
 ExcelUtilities Initializing: C:\Users\gaguilar\Desktop\Andersen.xlsx
 Target Sheet = C:\Users\gaguilar\Desktop\Andersen.xlsx
 Target Chrome = C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 Target Home = https://andersen.inhance.io/app/test.html
-tempFitnessDirectory: C:\FitNesseRoot\files
+tempFitnessDirectory: C:\eclipse-workspace\configAutomation\FitNesseRoot\files\
 Location of chromedriver.exe is C:\eclipse-workspace\configAutomation\chromedriver.exe
 resource: file:/C:/eclipse-workspace/configAutomation/target/classes/chromedriver.exe
 chrome binary location: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 chromedriver.exe already exists
-2018-12-19 17:59:17 [main] INFO  Info  - vlcj: 3.10.1
+2018-12-20 18:24:27 [main] INFO  Info  - vlcj: 3.10.1
 
-2018-12-19 17:59:17 [main] INFO  Info  - java: 1.8.0_161 Oracle Corporation
+2018-12-20 18:24:27 [main] INFO  Info  - java: 1.8.0_161 Oracle Corporation
 
-2018-12-19 17:59:17 [main] INFO  Info  - java home: C:\Program Files\Java\jdk1.8.0_161\jre
+2018-12-20 18:24:27 [main] INFO  Info  - java home: C:\Program Files\Java\jdk1.8.0_161\jre
 
-2018-12-19 17:59:17 [main] INFO  Info  - os: Windows 10 10.0 amd64
+2018-12-20 18:24:27 [main] INFO  Info  - os: Windows 10 10.0 amd64
 
-2018-12-19 17:59:17 [main] INFO  LibVlcFactory  - vlc: 3.0.4 Vetinari, changeset 3.0.4-0-gf615db6332
+2018-12-20 18:24:27 [main] INFO  LibVlcFactory  - vlc: 3.0.4 Vetinari, changeset 3.0.4-0-gf615db6332
 
-2018-12-19 17:59:17 [main] INFO  LibVlcFactory  - libvlc: libvlc.dll
+2018-12-20 18:24:27 [main] INFO  LibVlcFactory  - libvlc: libvlc.dll
 
-Target Sheet = Auto Config
-opening sheet: Auto Config in Name: /xl/worksheets/sheet1.xml - Content Type: application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml
+Target Sheet = Auto Config 2
+opening sheet: Auto Config 2 in Name: /xl/worksheets/sheet2.xml - Content Type: application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml
 getting cell data: options [7]
 getting cell data: Choose an option [16]
 getting cell data: Patio Door [10]
@@ -1131,61 +1131,153 @@ extractTaggedOption[2][185]:
 extractTaggedOption[2][186]: 
 extractTaggedOption[2][187]: 
 extractTaggedOption[2][188]: 
-extractTaggedOption[2][189]: 
-extractTaggedOption[2][190]: 
-extractTaggedOption[2][191]: 
-extractTaggedOption[2][192]: 
-extractTaggedOption[2][193]: 
-extractTaggedOption[2][194]: 
-extractTaggedOption[2][195]: 
-extractTaggedOption[2][196]: 
-extractTaggedOption[2][197]: 
-extractTaggedOption[2][198]: 
-extractTaggedOption[2][199]: 
-extractTaggedOption[2][200]: 
-extractTaggedOption[2][201]: 
-extractTaggedOption[2][202]: 
-extractTaggedOption[2][203]: 
-extractTaggedOption[2][204]: 
-extractTaggedOption[2][205]: 
-extractTaggedOption[2][206]: 
-extractTaggedOption[2][207]: 
-extractTaggedOption[2][208]: 
-extractTaggedOption[2][209]: 
-extractTaggedOption[2][210]: 
-extractTaggedOption[2][211]: 
-extractTaggedOption[2][212]: 
-extractTaggedOption[2][213]: 
-extractTaggedOption[2][214]: 
-extractTaggedOption[2][215]: 
-extractTaggedOption[2][216]: 
-extractTaggedOption[2][217]: 
-extractTaggedOption[2][218]: 
-extractTaggedOption[2][219]: 
-extractTaggedOption[2][220]: 
-extractTaggedOption[2][221]: 
-extractTaggedOption[2][222]: 
-extractTaggedOption[2][223]: 
-extractTaggedOption[2][224]: 
-extractTaggedOption[2][225]: 
-extractTaggedOption[2][226]: 
-extractTaggedOption[2][227]: 
-extractTaggedOption[2][228]: 
-extractTaggedOption[2][229]: 
-extractTaggedOption[2][230]: 
-extractTaggedOption[2][231]: 
-extractTaggedOption[2][232]: 
-extractTaggedOption[2][233]: 
-extractTaggedOption[2][234]: 
+extractTaggedOption[2][189]: x
+Add to options: mouse:drag 0,0
+extractTaggedOption[2][190]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][191]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][192]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][193]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][194]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][195]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][196]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][197]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][198]: x
+Add to options: mouse:drag 0,150
+extractTaggedOption[2][199]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][200]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][201]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][202]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][203]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][204]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][205]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][206]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][207]: x
+Add to options: mouse:drag 0,150
+extractTaggedOption[2][208]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][209]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][210]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][211]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][212]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][213]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][214]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][215]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][216]: x
+Add to options: mouse:drag 0,-450
+extractTaggedOption[2][217]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][218]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][219]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][220]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][221]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][222]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][223]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][224]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][225]: x
+Add to options: mouse:drag 0,-150
+extractTaggedOption[2][226]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][227]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][228]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][229]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][230]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][231]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][232]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][233]: x
+Add to options: mouse:drag 150,0
+extractTaggedOption[2][234]: x
+Add to options: mouse:drag 0,300
 [config] 0: select:id='product-type' Patio Door
 [config] 1: select:data-prop='product' Gliding A-Series Frenchwood 1
 [config] 2: select:data-prop='Interior_Color' Maple
 [config] 3: select:data-prop='Exterior_Color' Black
-C:\eclipse-workspace\configAutomation\FitNesseRoot\files\Auto Config_Gliding A-Series Frenchwood 1.mp4
-2018-12-19 17:59:18 [main] INFO  VlcScreenRecorder  - start recording, C:\eclipse-workspace\configAutomation\FitNesseRoot\files\Auto Config_Gliding A-Series Frenchwood 1.mp4
+[config] 4: mouse:drag 0,0
+[config] 5: mouse:drag 150,0
+[config] 6: mouse:drag 150,0
+[config] 7: mouse:drag 150,0
+[config] 8: mouse:drag 150,0
+[config] 9: mouse:drag 150,0
+[config] 10: mouse:drag 150,0
+[config] 11: mouse:drag 150,0
+[config] 12: mouse:drag 150,0
+[config] 13: mouse:drag 0,150
+[config] 14: mouse:drag 150,0
+[config] 15: mouse:drag 150,0
+[config] 16: mouse:drag 150,0
+[config] 17: mouse:drag 150,0
+[config] 18: mouse:drag 150,0
+[config] 19: mouse:drag 150,0
+[config] 20: mouse:drag 150,0
+[config] 21: mouse:drag 150,0
+[config] 22: mouse:drag 0,150
+[config] 23: mouse:drag 150,0
+[config] 24: mouse:drag 150,0
+[config] 25: mouse:drag 150,0
+[config] 26: mouse:drag 150,0
+[config] 27: mouse:drag 150,0
+[config] 28: mouse:drag 150,0
+[config] 29: mouse:drag 150,0
+[config] 30: mouse:drag 150,0
+[config] 31: mouse:drag 0,-450
+[config] 32: mouse:drag 150,0
+[config] 33: mouse:drag 150,0
+[config] 34: mouse:drag 150,0
+[config] 35: mouse:drag 150,0
+[config] 36: mouse:drag 150,0
+[config] 37: mouse:drag 150,0
+[config] 38: mouse:drag 150,0
+[config] 39: mouse:drag 150,0
+[config] 40: mouse:drag 0,-150
+[config] 41: mouse:drag 150,0
+[config] 42: mouse:drag 150,0
+[config] 43: mouse:drag 150,0
+[config] 44: mouse:drag 150,0
+[config] 45: mouse:drag 150,0
+[config] 46: mouse:drag 150,0
+[config] 47: mouse:drag 150,0
+[config] 48: mouse:drag 150,0
+[config] 49: mouse:drag 0,300
+C:\eclipse-workspace\configAutomation\FitNesseRoot\files\Auto Config 2_Gliding A-Series Frenchwood 1.mp4
+2018-12-20 18:24:28 [main] INFO  VlcScreenRecorder  - start recording, C:\eclipse-workspace\configAutomation\FitNesseRoot\files\Auto Config 2_Gliding A-Series Frenchwood 1.mp4
 
-optionsConfiguration.size(): 4
-Start navigation for Gliding A-Series Frenchwood 1 [4]
+optionsConfiguration.size(): 50
+Start navigation for Gliding A-Series Frenchwood 1 [50]
 
 action: select
 attributeIdPair: id='product-type'
@@ -1279,14 +1371,290 @@ Dropdown 8: Black
 Dropdown 9: Red Rock
 Dropdown 10: Dove Grey
 Dropdown 11: Prairie Grass
-2018-12-19 17:59:56 [main] INFO  VlcScreenRecorder  - stop recording 
+
+action: mouse
+attributeIdPair: drag
+selection: 0,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 0,150
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 0,150
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 0,-450
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 0,-150
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 150,0
+
+mouse
+
+action: mouse
+attributeIdPair: drag
+selection: 0,300
+
+mouse
+2018-12-20 18:27:17 [main] INFO  VlcScreenRecorder  - stop recording 
 
 </stdOut>
-    <stdErr>Starting ChromeDriver 2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a) on port 32731
+    <stdErr>Starting ChromeDriver 2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a) on port 41382
 
 Only local connections are allowed.
 
-Dec 19, 2018 5:59:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Dec 20, 2018 6:24:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: OSS
 
 </stdErr>
@@ -1297,6 +1665,6 @@ INFO: Detected dialect: OSS
     <ignores>1</ignores>
     <exceptions>0</exceptions>
   </finalCounts>
-  <totalRunTimeInMillis>60913</totalRunTimeInMillis>
+  <totalRunTimeInMillis>190203</totalRunTimeInMillis>
 </testResults>
 
